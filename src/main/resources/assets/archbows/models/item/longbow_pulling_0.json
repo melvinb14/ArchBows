@@ -1,0 +1,6 @@
+{
+  "parent": "archbows:item/longbow",
+  "textures": {
+    "layer0": "archbows:item/longbow_pulling_0"
+  }
+}

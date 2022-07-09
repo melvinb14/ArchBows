@@ -1,0 +1,6 @@
+{
+  "parent": "archbows:item/flatbow",
+  "textures": {
+    "layer0": "archbows:item/flatbow_pulling_0"
+  }
+}

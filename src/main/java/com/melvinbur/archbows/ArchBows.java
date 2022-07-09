@@ -1,8 +1,14 @@
 package com.melvinbur.archbows;
 
 
+
+import com.melvinbur.archbows.common.bow.BowProperties;
+
 import com.melvinbur.archbows.common.util.Logger;
+import com.melvinbur.archbows.core.BlockInit;
 import com.melvinbur.archbows.core.ItemInit;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,11 +20,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 
 
-
-
 @Mod(ArchBows.MOD_ID)
 public class ArchBows {
     public static final String MOD_ID = "archbows";
+
+
+
 
 
 
@@ -29,15 +36,7 @@ public class ArchBows {
     IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemInit.register(eventBus);
-
-
-
-
-
-
-
-
-
+        BlockInit.register(eventBus);
 
 
 
@@ -62,7 +61,11 @@ public class ArchBows {
 
 
 
+
     private void clientSetup(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX.get(), RenderType.cutout());
+
+        BowProperties.addCustomItemProperties();
 
     }
 

@@ -1,0 +1,19 @@
+{
+  "itemGroup.archbowsTab": "Arch Bows",
+  "item.archbows.longbow": "Long Bow",
+  "item.archbows.recurve": "Recurve Bow",
+  "item.archbows.shortbow": "Short Bow",
+  "item.archbows.flatbow": "Flat Bow",
+
+  "block.archbows.flax": "Flax",
+
+  "item.archbows.flax_fiber": "Flax Fiber",
+  "item.archbows.flax_string": "Flax String",
+  "item.archbows.linen_string": "Linen String",
+  "item.archbows.twig": "Twig",
+  "enchantment.archbows.quickdraw": "Quick Draw",
+  "archbows.bow_stats": "Bow Stats:",
+  "archbows.bow_range": "%dm Range",
+  "archbows.bow_damage": "%dx Damage",
+  "archbows.bow_draw_speed": "%ds Draw Speed"
+}

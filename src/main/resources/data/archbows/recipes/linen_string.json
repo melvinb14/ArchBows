@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "# #",
+        "###"
+       
+    ],
+    "key": {
+        "#": {
+            "item": "archbows:flax_string"
+        }
+    },
+    "result": {
+        "item": "archbows:linen_string",
+        "count": 2
+    }
+}

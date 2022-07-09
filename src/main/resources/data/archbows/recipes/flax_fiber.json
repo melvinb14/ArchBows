@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#"
+
+       
+    ],
+    "key": {
+        "#": {
+            "item": "archbows:flax"
+        }
+    },
+    "result": {
+        "item": "archbows:flax_fiber",
+        "count": 3
+    }
+}

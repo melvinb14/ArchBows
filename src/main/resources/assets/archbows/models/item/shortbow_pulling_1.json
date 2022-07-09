@@ -1,0 +1,6 @@
+{
+  "parent": "archbows:item/shortbow",
+  "textures": {
+    "layer0": "archbows:item/shortbow_pulling_1"
+  }
+}

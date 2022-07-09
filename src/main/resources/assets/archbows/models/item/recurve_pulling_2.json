@@ -1,0 +1,6 @@
+{
+  "parent": "archbows:item/recurve",
+  "textures": {
+    "layer0": "archbows:item/recurve_pulling_2"
+  }
+}
