@@ -2,6 +2,7 @@ package com.melvinbur.archbows;
 
 
 
+
 import com.melvinbur.archbows.common.bow.BowProperties;
 
 import com.melvinbur.archbows.common.util.Logger;
@@ -16,7 +17,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 
 
 
@@ -44,6 +44,7 @@ public class ArchBows {
 
 
 
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -52,11 +53,16 @@ public class ArchBows {
 }
 
 
+
     @SubscribeEvent
-    public static void onCommonSetup() {
+    public static void onCommonSetup(FMLCommonSetupEvent evt) {
         LOGGER.debug("Running common setup.");
 
+
+
     }
+
+
 
 
 
@@ -67,10 +73,15 @@ public class ArchBows {
 
         BowProperties.addCustomItemProperties();
 
+
+
+
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
+
+        private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
 
         });
 

@@ -1,4 +1,4 @@
-package com.melvinbur.archbows.common;
+package com.melvinbur.archbows.common.test;
 
 
 import net.minecraft.ChatFormatting;

@@ -1,6 +1,6 @@
 package com.melvinbur.archbows.common.bow;
 
-import com.melvinbur.archbows.common.events.FOVevent;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleOptions;
@@ -9,7 +9,7 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
+
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.event.FOVModifierEvent;
@@ -43,8 +43,14 @@ public class ArchFlatbowItem extends  BowItem {
     }
 
 
+
+
     public float getDrawSpeed() {
         return Math.max(0, drawSpeed);
+    }
+
+    public int getRange() {
+        return (int) maxBowRange;
     }
 
     @Override

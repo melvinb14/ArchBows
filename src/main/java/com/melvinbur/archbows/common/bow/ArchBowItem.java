@@ -1,24 +1,30 @@
 package com.melvinbur.archbows.common.bow;
 
+
+
 import net.minecraft.ChatFormatting;
+
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
+
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+
 
 import java.util.List;
 import java.util.function.Predicate;
 
 import static com.melvinbur.archbows.api.RangedAttackHelper.getVanillaBowChargeTime;
 
-public class ArchBowItem extends BowItem {
+public class ArchBowItem extends BowItem  {
 
     public final Tiers material;
     public final float drawSpeed;
     public static float maxBowRange;
     private final ParticleOptions type;
+
 
     public ArchBowItem (Tiers material, Properties properties, float drawSpeed, float maxBowRangePar) {
         super(properties);
@@ -35,6 +41,7 @@ public class ArchBowItem extends BowItem {
         maxBowRange = maxBowRangePar;
         type = particles;
     }
+
 
     public float getDrawSpeed() {
         return Math.max(0, drawSpeed);
@@ -54,6 +61,7 @@ public class ArchBowItem extends BowItem {
 
         return arrowVelocity;
     }
+
 
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {

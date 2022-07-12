@@ -1,0 +1,71 @@
+{
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "archbows:linen_string",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:flax_fiber",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:flax_string",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:recurve",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "archbows:flatbow",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "archbows:longbow",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 61
+        }
+      ]
+    }
+  ]
+}
