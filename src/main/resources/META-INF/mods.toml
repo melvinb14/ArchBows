@@ -5,10 +5,10 @@ license="MIT"
 modId="archbows"
 version="${file.jarVersion}"
 displayName="Arch Bows"
-credits="Thanks for the tutorials Kaupenjoe and Turtywurty"
+credits="Thanks for the tutorials Kaupenjoe"
 authors="melvinbur"
 description='''
-a Bow Mod
+a Bow Mod that extends the vanilla bow family
 '''
 [[dependencies.archbows]]
     modId="forge"
