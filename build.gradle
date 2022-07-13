@@ -21,7 +21,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
 
-version = '0.0.0-1.18.2'
+version = '1.0.0-1.18.2'
 group = 'com.melvinbur.archbows' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'archbows'
 
