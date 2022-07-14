@@ -7,7 +7,7 @@
         {
           "type": "item",
           "name": "archbows:twig",
-          "weight": 8,
+          "weight": 6,
           "functions": [
             {
               "function": "set_count",
@@ -21,7 +21,7 @@
         {
           "type": "item",
           "name": "archbows:flax_fiber",
-          "weight": 8,
+          "weight": 6,
           "functions": [
             {
               "function": "set_count",
@@ -68,7 +68,7 @@
         },
         {
           "type": "empty",
-          "weight": 68
+          "weight": 60
         }
       ]
     }

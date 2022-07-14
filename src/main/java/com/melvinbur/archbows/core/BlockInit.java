@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,6 +25,10 @@ public class BlockInit {
     public static final RegistryObject<Block> FLAX = registerBlock("flax",
             () -> new FlowerBlock(MobEffects.MOVEMENT_SLOWDOWN, 2,
                     BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+
+    public static final RegistryObject<Block> POTTED_FLAX = BLOCKS.register("potted_flax",
+            () -> new FlowerPotBlock(null, BlockInit.FLAX,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
 
 
