@@ -42,8 +42,8 @@ public class ItemInit {
 
     /**
      * Longbow = base range 41 - base drawspeed 45 - durability 460
-     * Flatbow = base range 27 - base drawspeed 35 - durability 435
-     * Recurvebow = base range 19 - base drawspeed 25 - durability 410
+     * Flatbow = base range 30 - base drawspeed 34 - durability 435
+     * Recurvebow = base range 23 - base drawspeed 25 - durability 410
      * Bow = base range 15 - base drawspeed 20 - durability 385
      * Shortbow = base range 7 - base drawspeed 10 - durability 360
      * Crossbow = base range 8 - base drawspeed 25 - durability 465
@@ -54,13 +54,13 @@ public class ItemInit {
             () -> new ArchLongbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(460), 45, 41f));
 
     public static final RegistryObject<ArchBowItem> RECURVE_BOW = ITEMS.register("recurve",
-            () -> new ArchBowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(410), 23, 23f));
+            () -> new ArchBowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(410), 25, 23f));
 
     public static final RegistryObject<ArchShortbowItem> SHORT_BOW = ITEMS.register("shortbow",
             () -> new ArchShortbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(360), 10, 7f));
 
     public static final RegistryObject<ArchFlatbowItem> FLAT_BOW = ITEMS.register("flatbow",
-            () -> new ArchFlatbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 31, 31f));
+            () -> new ArchFlatbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 34, 30f));
 
 
 
