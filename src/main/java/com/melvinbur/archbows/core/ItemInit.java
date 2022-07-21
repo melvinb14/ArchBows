@@ -64,7 +64,7 @@ public class ItemInit {
             () -> new ArchFlatbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 34, 30f));
 
     public static final RegistryObject<ArchCrossbowItem> ARBALEST = ITEMS.register("arbalest",
-            () -> new ArchCrossbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 28, 14.5f));
+            () -> new ArchCrossbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(495), 28, 14.5f));
 
 
 
