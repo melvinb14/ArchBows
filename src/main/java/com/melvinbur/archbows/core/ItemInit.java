@@ -3,14 +3,11 @@ package com.melvinbur.archbows.core;
 import com.melvinbur.archbows.ArchBows;
 
 
-
-import com.melvinbur.archbows.common.bow.ArchBowItem;
-import com.melvinbur.archbows.common.bow.ArchFlatbowItem;
-import com.melvinbur.archbows.common.bow.ArchLongbowItem;
-import com.melvinbur.archbows.common.bow.ArchShortbowItem;
+import com.melvinbur.archbows.common.bow.*;
 
 import net.minecraft.world.item.Item;
 
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -34,6 +31,9 @@ public class ItemInit {
     public static final RegistryObject<Item> TWIG = ITEMS.register("twig",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
+    public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
+            () -> new ItemNameBlockItem(BlockInit.FLAX_CROP.get(),
+                    new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
 
 
@@ -47,6 +47,7 @@ public class ItemInit {
      * Bow = base range 15 - base drawspeed 20 - durability 385
      * Shortbow = base range 7 - base drawspeed 10 - durability 360
      * Crossbow = base range 8 - base drawspeed 25 - durability 465
+     * Arbalest = base range 14,5 - base drawspeed 28 - durability 465
      */
 
     //DrawSpeed - Range
@@ -61,6 +62,9 @@ public class ItemInit {
 
     public static final RegistryObject<ArchFlatbowItem> FLAT_BOW = ITEMS.register("flatbow",
             () -> new ArchFlatbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 34, 30f));
+
+    public static final RegistryObject<ArchCrossbowItem> ARBALEST = ITEMS.register("arbalest",
+            () -> new ArchCrossbowItem(Tiers.WOOD, new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), 28, 14.5f));
 
 
 

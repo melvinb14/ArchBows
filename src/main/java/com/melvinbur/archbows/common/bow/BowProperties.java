@@ -16,6 +16,7 @@ public class BowProperties  {
         registerBowProperties(ItemInit.RECURVE_BOW.get());
         registerShortBowProperties(ItemInit.SHORT_BOW.get());
         registerFlatBowProperties(ItemInit.FLAT_BOW.get());
+        registerCrossbowProperties(ItemInit.ARBALEST.get());
     }
 
 

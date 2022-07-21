@@ -5,7 +5,11 @@
   "item.archbows.shortbow": "Short Bow",
   "item.archbows.flatbow": "Flat Bow",
 
+  "item.archbows.arbalest": "Arbalest",
+
   "block.archbows.flax": "Flax",
+  "item.archbows.flax_seeds": "Flax Seeds",
+  "block.archbows.flax_crop": "Flax",
 
   "item.archbows.flax_fiber": "Flax Fiber",
   "item.archbows.flax_string": "Flax String",

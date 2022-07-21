@@ -73,6 +73,7 @@ public class ArchBows {
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_FLAX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX_CROP.get(), RenderType.cutout());
 
         BowProperties.addCustomItemProperties();
 

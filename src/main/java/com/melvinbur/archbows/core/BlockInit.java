@@ -30,6 +30,9 @@ public class BlockInit {
             () -> new FlowerPotBlock(null, BlockInit.FLAX,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
+    public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
+            () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+
 
 
 

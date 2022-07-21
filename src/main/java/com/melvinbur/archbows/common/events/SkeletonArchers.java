@@ -3,14 +3,20 @@ package com.melvinbur.archbows.common.events;
 
 
 import com.melvinbur.archbows.core.ItemInit;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
 
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.Stray;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
+import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -44,13 +50,18 @@ public class SkeletonArchers  {/**
 
                     }
                 }
+
             }
 
         }
-    **/
-
-        }
 
 
 
-// Apply to Wither skeleton or Piglins when nether bow is added
+**/
+
+
+}
+
+
+
+
