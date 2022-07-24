@@ -12,5 +12,6 @@ public class WorldEventsInit {
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
 
         FlowerGenerationInit.generateFlowers(event);
+
     }
 }

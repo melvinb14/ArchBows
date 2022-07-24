@@ -3,91 +3,28 @@
   "textures": {
     "layer0": "archbows:item/longbow"
   },
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        -80,
-        260,
-        -40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1.8,
-        1.8,
-        1.8
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        -80,
-        -280,
-        40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1.8,
-        1.8,
-        1.8
-      ]
-    },
-    "firstperson_righthand": {
-      "rotation": [
-        0,
-        -90,
-        25
-      ],
-      "translation": [
-        1.13,
-        3.2,
-        1.13
-      ],
-      "scale": [
-        0.88,
-        0.88,
-        0.88
-      ]
-    },
-    "firstperson_lefthand": {
-      "rotation": [
-        0,
-        90,
-        -25
-      ],
-      "translation": [
-        1.13,
-        3.2,
-        1.13
-      ],
-      "scale": [
-        0.88,
-        0.88,
-        0.88
-      ]
-    },
-    "gui": {
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "translation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.1,
-        1.1,
-        1.1
-      ]
+    "display": {
+      "thirdperson_righthand": {
+        "rotation": [ -80, 260, -40 ],
+        "translation": [ -1, -2, 2.5 ],
+        "scale": [  1.8,  1.8,  1.8 ]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [ -80, -280, 40 ],
+        "translation": [ -1, -2, 2.5 ],
+        "scale": [  1.8,  1.8,  1.8 ]
+      },
+      "firstperson_righthand": {
+        "rotation": [ 0, -90, 25 ],
+        "translation": [ 1.13, 3.2, 1.13],
+        "scale": [ 0.88, 0.88, 0.88 ]
+      },
+      "firstperson_lefthand": {
+        "rotation": [ 0, 90, -25 ],
+        "translation": [ 1.13, 3.2, 1.13],
+        "scale": [ 0.88, 0.88, 0.88 ]
+      }
+
     },
     "overrides": [
       {
@@ -112,4 +49,3 @@
       }
     ]
   }
-}

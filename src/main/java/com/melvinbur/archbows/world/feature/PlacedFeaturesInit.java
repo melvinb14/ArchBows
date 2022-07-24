@@ -11,4 +11,6 @@ public class PlacedFeaturesInit {
     public static final Holder<PlacedFeature> FLAX_PLACED = PlacementUtils.register("flax_placed",
             ConfiguredFeatureInit.FLAX, RarityFilter.onAverageOnceEvery(16),
             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+
 }

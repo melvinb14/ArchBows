@@ -33,6 +33,9 @@ public class BlockInit {
     public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
+    public static final RegistryObject<Block> TWIG = registerBlock("twig",
+            () -> new TwigBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),CreativeModeTabInit.ARCHBOWS_TAB);
+
 
 
 
