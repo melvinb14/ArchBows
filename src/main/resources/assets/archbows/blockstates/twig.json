@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "archbows:block/twig" },
+    "facing=east": { "model": "archbows:block/twig", "y": 90 },
+    "facing=south": { "model": "archbows:block/twig", "y": 180 },
+    "facing=west": { "model": "archbows:block/twig", "y": 270 }
+  }
+}

@@ -28,8 +28,6 @@ public class ItemInit {
     public static final RegistryObject<Item> LINEN_STRING = ITEMS.register("linen_string",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
-    public static final RegistryObject<Item> TWIG = ITEMS.register("twig",
-            () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
     public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
             () -> new ItemNameBlockItem(BlockInit.FLAX_CROP.get(),

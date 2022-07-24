@@ -21,15 +21,16 @@ public class FlowerGenerationInit {
         if (types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            base.add(PlacedFeaturesInit.FLAX_PLACED);
+
+        } else if (types.contains(BiomeDictionary.Type.HILLS)) {
+            List<Holder<PlacedFeature>> base =
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(PlacedFeaturesInit.FLAX_PLACED);
-        }
 
-           else  if (types.contains(BiomeDictionary.Type.HILLS)) {
-                List<Holder<PlacedFeature>> base =
-                        event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-
-                base.add(PlacedFeaturesInit.FLAX_PLACED);
             }
         }
-    }
+
+}
+

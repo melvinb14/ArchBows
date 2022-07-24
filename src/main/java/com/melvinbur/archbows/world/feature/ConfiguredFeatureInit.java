@@ -16,4 +16,6 @@ public class ConfiguredFeatureInit {
                     new RandomPatchConfiguration(23, 4, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.FLAX.get())))));
 
+
+
 }
