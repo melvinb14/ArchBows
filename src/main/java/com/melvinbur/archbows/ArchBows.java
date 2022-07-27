@@ -35,7 +35,7 @@ public class ArchBows {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = new Logger(MOD_ID);
     public ArchBows() {
-    IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemInit.register(eventBus);
         BlockInit.register(eventBus);
@@ -50,9 +50,9 @@ public class ArchBows {
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
-    // Register ourselves for server and other game events we are interested in
+        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-}
+    }
 
 
 
@@ -84,7 +84,7 @@ public class ArchBows {
     }
 
 
-        private void setup(final FMLCommonSetupEvent event) {
+    private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockInit.FLAX.getId(), BlockInit.POTTED_FLAX);
 

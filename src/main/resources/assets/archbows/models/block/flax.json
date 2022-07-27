@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "archbows:block/flax"
-  }
+  },
+  "render_type": "cutout"
 }

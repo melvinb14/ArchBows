@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "archbows:flax_fiber"
+            "tag": "forge:fiber/flax"
         }
     },
     "result": {

@@ -1,17 +1,13 @@
 package com.melvinbur.archbows.common.bow;
 
 
-
 import net.minecraft.ChatFormatting;
-
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
-
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-
 
 import java.util.List;
 import java.util.function.Predicate;

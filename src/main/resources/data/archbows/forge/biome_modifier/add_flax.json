@@ -1,0 +1,5 @@
+{
+  "type": "archbows:vegetal",
+  "biomes": "#forge:is_forest",
+  "feature": "archbows:flax_placed"
+}

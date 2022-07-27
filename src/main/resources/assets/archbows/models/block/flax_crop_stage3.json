@@ -2,5 +2,6 @@
     "parent": "block/crop",
     "textures": {
         "crop": "archbows:block/flax"
-    }
+    },
+    "render_type": "cutout"
 }

@@ -8,9 +8,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-
 import java.util.List;
-
 import java.util.function.Predicate;
 
 public class ArchLongbowItem extends BowItem  {
