@@ -3,7 +3,9 @@ package com.melvinbur.archbows;
 
 
 
+
 import com.melvinbur.archbows.common.bow.BowProperties;
+
 
 import com.melvinbur.archbows.common.util.Logger;
 import com.melvinbur.archbows.core.BlockInit;
@@ -47,6 +49,7 @@ public class ArchBows {
 
 
 
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -77,6 +80,8 @@ public class ArchBows {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.TWIG.get(), RenderType.translucent());
 
         BowProperties.addCustomItemProperties();
+
+
 
 
 
