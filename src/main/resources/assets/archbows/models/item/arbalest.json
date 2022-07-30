@@ -36,39 +36,39 @@
       "scale":[ 1, 1, 0.5 ]
     }
   },
-    "overrides": [
-      {
-        "predicate": {
-          "pulling": 1
-        },
-        "model": "archbows:item/arbalest_pulling_0"
+  "overrides": [
+    {
+      "predicate": {
+        "pulling": 1
       },
-      {
-        "predicate": {
-          "pulling": 1,
-          "pull": 0.58
-        },
-        "model": "archbows:item/arbalest_pulling_1"
+      "model": "archbows:item/arbalest_pulling_0"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.58
       },
-      {
-        "predicate": {
-          "pulling": 1,
-          "pull": 1.0
-        },
-        "model": "archbows:item/arbalest_pulling_2"
+      "model": "archbows:item/arbalest_pulling_1"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 1.0
       },
-      {
-        "predicate": {
-          "charged": 1
-        },
-        "model": "archbows:item/arbalest_arrow"
+      "model": "archbows:item/arbalest_pulling_2"
+    },
+    {
+      "predicate": {
+        "charged": 1
       },
-      {
-        "predicate": {
-          "charged": 1,
-          "firework": 1
-        },
-        "model": "archbows:item/arbalest_firework"
-      }
-    ]
-  }
+      "model": "archbows:item/arbalest_arrow"
+    },
+    {
+      "predicate": {
+        "charged": 1,
+        "firework": 1
+      },
+      "model": "archbows:item/arbalest_firework"
+    }
+  ]
+}

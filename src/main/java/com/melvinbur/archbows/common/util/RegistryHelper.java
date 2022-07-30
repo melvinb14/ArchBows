@@ -2,11 +2,11 @@ package com.melvinbur.archbows.common.util;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.ForgeRegistryEntry;
+
 
 import java.util.Objects;
 
-public class RegistryHelper {
+public class RegistryHelper {/**
     private RegistryHelper() {}
     public static String getItemRegistryName(Item item) {
         ResourceLocation rl = item.getRegistryName();
@@ -23,4 +23,5 @@ public class RegistryHelper {
         Objects.requireNonNull(registryName);
         return registryName;
     }
+ **/
 }

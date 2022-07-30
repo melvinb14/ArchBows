@@ -3,8 +3,6 @@ package com.melvinbur.archbows.common.bow;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -88,9 +86,9 @@ public class ArchShortbowItem extends BowItem {
     public void appendHoverText(ItemStack stack, Level pLevel, List<Component> pTooltipComponents,
                                 TooltipFlag pIsAdvanced) {
         super.appendHoverText(stack, pLevel, pTooltipComponents, pIsAdvanced);
-        pTooltipComponents.add(TextComponent.EMPTY);
-        pTooltipComponents.add(new TranslatableComponent("archbows.bow_stats").withStyle(ChatFormatting.GRAY));
-        pTooltipComponents.add(new TextComponent(" ").append(new TranslatableComponent("archbows.bow_range", maxBowRange).withStyle(ChatFormatting.DARK_GREEN)));
-        pTooltipComponents.add(new TextComponent(" ").append(new TranslatableComponent("archbows.bow_draw_speed", (double) drawSpeed / 20).withStyle(ChatFormatting.DARK_GREEN)));
+        pTooltipComponents.add(Component.empty());
+        pTooltipComponents.add(Component.translatable("archbows.bow_stats").withStyle(ChatFormatting.GRAY));
+        pTooltipComponents.add(Component.literal(" ").append(Component.translatable("archbows.bow_range", maxBowRange).withStyle(ChatFormatting.DARK_GREEN)));
+        pTooltipComponents.add(Component.literal(" ").append(Component.translatable("archbows.bow_draw_speed", (double) drawSpeed / 20).withStyle(ChatFormatting.DARK_GREEN)));
     }
 }

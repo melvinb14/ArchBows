@@ -10,11 +10,16 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConf
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
+
 public class ConfiguredFeatureInit {
+
+
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLAX =
             FeatureUtils.register("flower_flax", Feature.FLOWER,
-                    new RandomPatchConfiguration(23, 4, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                    new RandomPatchConfiguration(26, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.FLAX.get())))));
+
+
 
 
 
