@@ -52,8 +52,13 @@
           "weight": 4
         },
         {
+          "type": "item",
+          "name": "archbows:pistol_crossbow",
+          "weight": 8
+        },
+        {
           "type": "empty",
-          "weight": 62
+          "weight": 20
         }
       ]
     }

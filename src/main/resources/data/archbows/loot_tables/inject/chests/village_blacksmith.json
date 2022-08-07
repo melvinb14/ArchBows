@@ -20,7 +20,7 @@
         },
         {
           "type": "item",
-          "name": "archbows:shortbow",
+          "name": "archbows:flax_string",
           "weight": 5,
           "functions": [
             {
@@ -47,6 +47,11 @@
             }
           ]
 
+        },
+        {
+          "type": "item",
+          "name": "archbows:pistol_crossbow",
+          "weight": 4
         },
         {
           "type": "empty",

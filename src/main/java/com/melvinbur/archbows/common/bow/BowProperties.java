@@ -2,26 +2,18 @@ package com.melvinbur.archbows.common.bow;
 
 
 
-import com.melvinbur.archbows.core.ItemInit;
-
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Items;
 
 
 public class BowProperties  {
-    public static void addCustomItemProperties() {
-        registerLongBowProperties(ItemInit.LONG_BOW.get());
-        registerBowProperties(ItemInit.RECURVE_BOW.get());
-        registerShortBowProperties(ItemInit.SHORT_BOW.get());
-        registerFlatBowProperties(ItemInit.FLAT_BOW.get());
-        registerCrossbowProperties(ItemInit.ARBALEST.get());
-    }
 
 
 
-    public static void registerBowProperties(ArchBowItem bow)  {
+    public static void registerBowProperties(BaseBowItem bow)  {
         ItemProperties.register(bow, new ResourceLocation("pull"),(bowItem, level, playerEntity, integer) -> {
             if (playerEntity == null) {
                 return 0.0F;
@@ -38,7 +30,7 @@ public class BowProperties  {
 
     }
 
-    public static void registerShortBowProperties(ArchShortbowItem bow) {
+    public static void registerShortBowProperties(ShortbowItem bow) {
         ItemProperties.register(bow, new ResourceLocation("pull"),(bowItem, level, playerEntity, integer) -> {
             if (playerEntity == null) {
                 return 0.0F;
@@ -53,7 +45,7 @@ public class BowProperties  {
                 livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F);
     }
 
-    public static void registerLongBowProperties(ArchLongbowItem bow) {
+    public static void registerLongBowProperties(LongbowItem bow) {
         ItemProperties.register(bow, new ResourceLocation("pull"),(bowItem, level, playerEntity, integer) -> {
             if (playerEntity == null) {
                 return 0.0F;
@@ -68,7 +60,7 @@ public class BowProperties  {
                 livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F);
     }
 
-    public static void registerFlatBowProperties(ArchFlatbowItem bow) {
+    public static void registerFlatBowProperties(FlatbowItem bow) {
         ItemProperties.register(bow, new ResourceLocation("pull"),(bowItem, level, playerEntity, integer) -> {
             if (playerEntity == null) {
                 return 0.0F;
@@ -85,14 +77,14 @@ public class BowProperties  {
 
     }
 
-    public static void registerCrossbowProperties(ArchCrossbowItem crossbow) {
+    public static void registerCrossbowProperties(CrossbowItem crossbow) {
         ItemProperties.register(crossbow, new ResourceLocation("pull"),(crossbowItem, level, playerEntity, integer) -> {
             if (playerEntity == null) {
                 return 0.0F;
             } else {
                 int useTicks = crossbowItem.getUseDuration() - playerEntity.getUseItemRemainingTicks();
-                return ArchCrossbowItem.isCharged(crossbowItem) ? 0.0F :
-                        (float) (useTicks) / (float)  ArchCrossbowItem.getChargeDuration(crossbowItem);
+                return CrossbowItem.isCharged(crossbowItem) ? 0.0F :
+                        (float) (useTicks) / (float)  CrossbowItem.getChargeDuration(crossbowItem);
             }
         });
 
@@ -100,7 +92,7 @@ public class BowProperties  {
             if (livingEntity == null) {
                 return 0.0F;
             } else {
-                return livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !ArchCrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
+                return livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
             }
         });
 
@@ -108,7 +100,7 @@ public class BowProperties  {
             if (livingEntity == null) {
                 return 0.0F;
             } else {
-                return ArchCrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
+                return CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
             }
         });
 
@@ -116,7 +108,7 @@ public class BowProperties  {
             if (livingEntity == null) {
                 return 0.0F;
             } else {
-                return ArchCrossbowItem.isCharged(itemStack) && ArchCrossbowItem.containsChargedProjectile(itemStack,
+                return CrossbowItem.isCharged(itemStack) && CrossbowItem.containsChargedProjectile(itemStack,
                         Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
             }
         });

@@ -1,39 +1,47 @@
 package com.melvinbur.archbows.common.bow;
 
 
+import com.melvinbur.archbows.common.api.BowTier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
 import java.util.function.Predicate;
 
-import static com.melvinbur.archbows.api.RangedAttackHelper.getVanillaBowChargeTime;
+import static com.melvinbur.archbows.common.api.RangedAttackHelper.getVanillaBowChargeTime;
 
 public class ArchBowItem extends BowItem  {
 
-    public final Tiers material;
+    private final BowTier tier;
     public final float drawSpeed;
     public static float maxBowRange;
+
     private final ParticleOptions type;
 
 
-    public ArchBowItem (Tiers material, Properties properties, float drawSpeed, float maxBowRangePar) {
+    public ArchBowItem (BowTier tier, Properties properties, float drawSpeed, float maxBowRangePar) {
         super(properties);
-        this.material = material;
+        this.tier = tier;
         this.drawSpeed = drawSpeed;
         maxBowRange = maxBowRangePar;
         type = null;
     }
 
-    public ArchBowItem (Tiers material, float drawSpeed,Properties properties, float maxBowRangePar,ParticleOptions particles) {
+    public ArchBowItem (BowTier tier, float drawSpeed,Properties properties, float maxBowRangePar,ParticleOptions particles) {
         super(properties);
-        this.material = material;
+        this.tier = tier;
         this.drawSpeed = drawSpeed;
         maxBowRange = maxBowRangePar;
         type = particles;
+    }
+    @Override
+    public AbstractArrow customArrow(AbstractArrow arrow) {
+        arrow.setBaseDamage(arrow.getBaseDamage() + this.tier.getAttackDamageBonus());
+        return arrow;
     }
 
 
@@ -74,12 +82,12 @@ public class ArchBowItem extends BowItem  {
 
     @Override
     public int getEnchantmentValue() {
-        return material.getEnchantmentValue();
+        return tier.getEnchantmentValue();
     }
 
     @Override
     public boolean isValidRepairItem(ItemStack stack, ItemStack ingredient) {
-        return this.material.getRepairIngredient().test(ingredient) || super.isValidRepairItem(stack, ingredient);
+        return this.tier.getRepairIngredient().test(ingredient) || super.isValidRepairItem(stack, ingredient);
     }
 
     @Override
@@ -88,7 +96,11 @@ public class ArchBowItem extends BowItem  {
         super.appendHoverText(stack, pLevel, pTooltipComponents, pIsAdvanced);
         pTooltipComponents.add(Component.empty());
         pTooltipComponents.add(Component.translatable("archbows.bow_stats").withStyle(ChatFormatting.GRAY));
-        pTooltipComponents.add(Component.literal(" ").append(Component.translatable("archbows.bow_range", maxBowRange).withStyle(ChatFormatting.DARK_GREEN)));
+        pTooltipComponents.add(Component.literal("+" + Float.toString(this.tier.getAttackDamageBonus()) + " ")
+                .append(Component.translatable("archbows.bow_damage"))
+                .withStyle(ChatFormatting.DARK_GREEN));
         pTooltipComponents.add(Component.literal(" ").append(Component.translatable("archbows.bow_draw_speed", (double) drawSpeed / 20).withStyle(ChatFormatting.DARK_GREEN)));
+
+
     }
 }

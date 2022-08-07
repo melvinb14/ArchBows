@@ -18,9 +18,4 @@ public class ConfiguredFeatureInit {
             FeatureUtils.register("flower_flax", Feature.FLOWER,
                     new RandomPatchConfiguration(26, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.FLAX.get())))));
-
-
-
-
-
 }
