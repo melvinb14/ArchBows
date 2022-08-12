@@ -28,12 +28,12 @@ public class FlatbowItem extends BowItem {
     protected String modId;
 
 
-    public FlatbowItem(Properties prop, Tiers material, float drawSpeed) {
+    public FlatbowItem(Properties prop, Tiers material, float drawSpeed, float maxVelocity) {
         super(prop);
         this.drawSpeed = drawSpeed;
         this.modId = null;
         this.material = material;
-        this.maxVelocity = 1.50F;
+        this.maxVelocity = maxVelocity;
 
 
         if (FMLEnvironment.dist.isClient()) {

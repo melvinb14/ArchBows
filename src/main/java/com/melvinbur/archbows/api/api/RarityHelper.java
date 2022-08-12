@@ -1,4 +1,4 @@
-package com.melvinbur.archbows.common.api;
+package com.melvinbur.archbows.api.api;
 
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;

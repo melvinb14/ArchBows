@@ -1,6 +1,7 @@
 package com.melvinbur.archbows.common.bow;
 
 import com.google.common.collect.Lists;
+import com.melvinbur.archbows.common.config.ABConfig;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
 import net.minecraft.ChatFormatting;
@@ -59,8 +60,8 @@ public class HeavyCrossbowItem extends CrossbowItem {
         super(prop);
         this.modId = null;
         this.material = material;
-        loadTicks = 35;
-        aimTicks = 10;
+        loadTicks = ABConfig.CONFIG.heavyLoadTime.get();
+        aimTicks = ABConfig.CONFIG.heavyAimTime.get();
 
 
         if (FMLEnvironment.dist.isClient()) {
@@ -103,8 +104,10 @@ public class HeavyCrossbowItem extends CrossbowItem {
     private static float getShootingPower(ItemStack pCrossbowStack) {
         return containsChargedProjectile(pCrossbowStack, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
     }
+
     public static float getBoltVelocity() {
-        return 1.6F;
+        return ABConfig.CONFIG.HeavyCrossbowProjectileVelocity.get().floatValue();
+
     }
 
 
@@ -149,7 +152,7 @@ public class HeavyCrossbowItem extends CrossbowItem {
 
     private static boolean tryLoadProjectiles(LivingEntity pShooter, ItemStack pCrossbowStack) {
         int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.MULTISHOT, pCrossbowStack);
-        int j = i == 0 ? 1 : 3;
+        int j = i > 0 ? 3 : 1;
         boolean flag = pShooter instanceof Player && ((Player) pShooter).getAbilities().instabuild;
         ItemStack itemstack = pShooter.getProjectile(pCrossbowStack);
         ItemStack itemstack1 = itemstack.copy();

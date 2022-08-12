@@ -2,6 +2,7 @@ package com.melvinbur.archbows.core;
 
 import com.melvinbur.archbows.ArchBows;
 import com.melvinbur.archbows.common.bow.*;
+import com.melvinbur.archbows.common.config.ABConfig;
 import com.melvinbur.archbows.common.test.TestCrossbow;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -23,23 +24,23 @@ public class ItemInit {
 
     //Bows
     public static final RegistryObject<ShortbowItem> SHORT_BOW = ITEMS.register("shortbow",
-            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(360), WOOD, 10f));
+            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.shortBowDurability.get()), WOOD, ABConfig.CONFIG.shortDrawspeed.get(), ABConfig.CONFIG.ShortBowProjectileVelocity.get()));
     public static final RegistryObject<BaseBowItem> RECURVE_BOW = ITEMS.register("recurve",
-            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(410), WOOD, 23f, 1.25F));
+            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.recurveBowDurability.get()), WOOD, ABConfig.CONFIG.recurveDrawspeed.get(), ABConfig.CONFIG.RecurveBowProjectileVelocity.get()));
 
     public static final RegistryObject<FlatbowItem> FLAT_BOW = ITEMS.register("flatbow",
-            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(435), WOOD, 31f));
+            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.flatBowDurability.get()), WOOD, ABConfig.CONFIG.flatDrawspeed.get(), ABConfig.CONFIG.FlatBowProjectileVelocity.get()));
 
     public static final RegistryObject<LongbowItem> LONG_BOW  = ITEMS.register("longbow",
-            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(455), WOOD, 45f));
+            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.longBowDurability.get()), WOOD, ABConfig.CONFIG.longDrawspeed.get(),ABConfig.CONFIG.LongBowProjectileVelocity.get()));
 
 
     //Crossbows
     public static final RegistryObject<HeavyCrossbowItem> ARBALEST = ITEMS.register("arbalest",
-            () -> new HeavyCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(625), IRON));
+            () -> new HeavyCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.heavyCrossbowDurability.get()), IRON));
 
     public static final RegistryObject<PistolCrossbowItem> PISTOL_CROSSBOW = ITEMS.register("pistol_crossbow",
-            () -> new PistolCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(415), IRON));
+            () -> new PistolCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.pistolCrossbowDurability.get()), IRON));
 
 
     //Items
