@@ -32,9 +32,9 @@ public class ArchBows {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         //Register config
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "ab-config.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "archbows-config.toml");
         ABConfig.loadConfig(ABConfig.CONFIG_SPEC,
-                FMLPaths.CONFIGDIR.get().resolve("ab-config.toml").toString());
+                FMLPaths.CONFIGDIR.get().resolve("archbows-config.toml").toString());
 
 
         ItemInit.register(eventBus);

@@ -52,6 +52,8 @@ public class  PistolCrossbowItem extends CrossbowItem {
     protected String modId;
     protected static int loadTicks;
     protected static int aimTicks;
+
+    protected static float maxVelocity;
     private boolean startSoundPlayed = false;
     private boolean midLoadSoundPlayed = false;
 
@@ -60,8 +62,10 @@ public class  PistolCrossbowItem extends CrossbowItem {
         super(prop);
         this.modId = null;
         this.material = material;
+        maxVelocity =  ABConfig.CONFIG.PistolCrossbowProjectileVelocity.get().floatValue();
         loadTicks = ABConfig.CONFIG.smallLoadTime.get();
         aimTicks = ABConfig.CONFIG.smallAimTime.get();
+
 
 
         if (FMLEnvironment.dist.isClient()) {
@@ -103,9 +107,6 @@ public class  PistolCrossbowItem extends CrossbowItem {
 
     private static float getShootingPower(ItemStack pCrossbowStack) {
         return containsChargedProjectile(pCrossbowStack, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
-    }
-    public static float getBoltVelocity() {
-        return ABConfig.CONFIG.PistolCrossbowProjectileVelocity.get().floatValue();
     }
 
 
@@ -296,14 +297,14 @@ public class  PistolCrossbowItem extends CrossbowItem {
                 Vec3 vec3 = pShooter.getViewVector(1.0F);
                 Vector3f vector3f = new Vector3f(vec3);
                 vector3f.transform(quaternion);
-                projectile.shootFromRotation(pShooter, pShooter.xRotO, pShooter.yRotO, 0.0F, getBoltVelocity() * 3.0F, pInaccuracy);
+                projectile.shootFromRotation(pShooter, pShooter.xRotO, pShooter.yRotO, 0.0F,  maxVelocity  * 3.0F, pInaccuracy);
             }
 
             pCrossbowStack.hurtAndBreak(flag ? 3 : 1, pShooter, (p_40858_) -> {
                 p_40858_.broadcastBreakEvent(pHand);
             });
             pLevel.addFreshEntity(projectile);
-            pLevel.playSound((Player) null, pShooter.getX(), pShooter.getY(), pShooter.getZ(), SoundEvents.CROSSBOW_SHOOT, SoundSource.PLAYERS, 1.0F, pSoundPitch / (pLevel.random.nextFloat() * 0.4F + 1.2F) + getBoltVelocity() * 0.5F);
+            pLevel.playSound((Player) null, pShooter.getX(), pShooter.getY(), pShooter.getZ(), SoundEvents.CROSSBOW_SHOOT, SoundSource.PLAYERS, 1.0F, pSoundPitch / (pLevel.random.nextFloat() * 0.4F + 1.2F) +  maxVelocity * 0.5F);
         }
 
     }
@@ -423,7 +424,7 @@ public class  PistolCrossbowItem extends CrossbowItem {
                         pTooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.ammo.type", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.ammo.arrow&firework", "archbows"))).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add((Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time.value", "archbows"), (float) loadTicks / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add((Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.aim_time", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.aim_time.value", "archbows"), (float) aimTicks / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
-                        pTooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.longbow.speed_multiplier", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), getBoltVelocity())).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
+                        pTooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.longbow.speed_multiplier", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"),  maxVelocity)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add(Component.literal(""));
                     } else {
                         pTooltip.add((Component.translatable(String.format("tooltip.%s.description", "archbows"), (Component.translatable("tooltip.archbows.show_details", ChatFormatting.AQUA.toString() + "SHIFT")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));

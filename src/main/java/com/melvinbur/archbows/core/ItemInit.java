@@ -24,15 +24,15 @@ public class ItemInit {
 
     //Bows
     public static final RegistryObject<ShortbowItem> SHORT_BOW = ITEMS.register("shortbow",
-            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.shortBowDurability.get()), WOOD, ABConfig.CONFIG.shortDrawspeed.get(), ABConfig.CONFIG.ShortBowProjectileVelocity.get()));
+            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.shortBowDurability.get()), WOOD));
     public static final RegistryObject<BaseBowItem> RECURVE_BOW = ITEMS.register("recurve",
-            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.recurveBowDurability.get()), WOOD, ABConfig.CONFIG.recurveDrawspeed.get(), ABConfig.CONFIG.RecurveBowProjectileVelocity.get()));
+            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.recurveBowDurability.get()), WOOD));
 
     public static final RegistryObject<FlatbowItem> FLAT_BOW = ITEMS.register("flatbow",
-            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.flatBowDurability.get()), WOOD, ABConfig.CONFIG.flatDrawspeed.get(), ABConfig.CONFIG.FlatBowProjectileVelocity.get()));
+            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.flatBowDurability.get()), WOOD));
 
     public static final RegistryObject<LongbowItem> LONG_BOW  = ITEMS.register("longbow",
-            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.longBowDurability.get()), WOOD, ABConfig.CONFIG.longDrawspeed.get(),ABConfig.CONFIG.LongBowProjectileVelocity.get()));
+            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.longBowDurability.get()), WOOD));
 
 
     //Crossbows

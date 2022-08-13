@@ -25,7 +25,9 @@ public class ABConfig {
 
     public static class ArchBowsConfig {
 
-
+        public  static final int xzspread = 6;
+        public  static final int yspread = 2;
+        public  static final int patchtries = 16;
         public  static final int arbalestDurability = 625;
         public  static final int pistolDurability = 415;
         public  static final int shortbowDurability = 360;
@@ -33,11 +35,40 @@ public class ABConfig {
         public  static final int flatbowDurability = 435;
         public  static final int longbowDurability = 455;
 
-        public  static final int xzspread = 6;
-        public  static final int yspread = 2;
-        public  static final int patchtries = 16;
+        public  static final int arbalestLoadTime = 35;
+
+        public  static final int arbalestAimTime = 10;
+
+        public  static final double arbalestVelocity = 1.6F;
+
+        public  static final int pistolLoadTime = 15;
+
+        public  static final int pistolAimTime = 10;
+
+        public  static final double pistolVelocity = 0.85F;
+
+        public  static final double shortbowSpeed = 10f;
+
+        public  static final double shortbowVelocity = 0.55F;
+
+        public  static final double recurvebowSpeed = 23f;
+
+        public  static final double recurveVelocity = 1.25F;
+
+        public  static final double flatbowSpeed = 31f;
+
+        public  static final double flatbowVelocity = 1.5F;
+
+        public  static final double longbowSpeed = 45f;
+
+        public  static final double longbowVelocity = 1.75F;
 
 
+
+
+        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_PATCH_TRIES;
+        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_XZ_SPREAD;
+        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_Y_SPREAD;
         public final ForgeConfigSpec.ConfigValue<Integer> heavyCrossbowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> pistolCrossbowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> shortBowDurability;
@@ -48,22 +79,20 @@ public class ABConfig {
 
         public final ForgeConfigSpec.ConfigValue<Integer> heavyLoadTime;
         public final ForgeConfigSpec.ConfigValue<Integer> heavyAimTime;
-        public final ForgeConfigSpec.ConfigValue<Float> HeavyCrossbowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> HeavyCrossbowProjectileVelocity;
         public final ForgeConfigSpec.ConfigValue<Integer> smallLoadTime;
         public final ForgeConfigSpec.ConfigValue<Integer> smallAimTime;
-        public final ForgeConfigSpec.ConfigValue<Float> PistolCrossbowProjectileVelocity;
-        public final ForgeConfigSpec.ConfigValue<Float> shortDrawspeed;
-        public final ForgeConfigSpec.ConfigValue<Float> ShortBowProjectileVelocity;
-        public final ForgeConfigSpec.ConfigValue<Float> recurveDrawspeed;
-        public final ForgeConfigSpec.ConfigValue<Float> RecurveBowProjectileVelocity;
-        public final ForgeConfigSpec.ConfigValue<Float> flatDrawspeed;
-        public final ForgeConfigSpec.ConfigValue<Float> FlatBowProjectileVelocity;
-        public final ForgeConfigSpec.ConfigValue<Float> longDrawspeed;
-        public final ForgeConfigSpec.ConfigValue<Float> LongBowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> PistolCrossbowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> shortDrawspeed;
+        public final ForgeConfigSpec.ConfigValue<Double> ShortBowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> recurveDrawspeed;
+        public final ForgeConfigSpec.ConfigValue<Double> RecurveBowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> flatDrawspeed;
+        public final ForgeConfigSpec.ConfigValue<Double> FlatBowProjectileVelocity;
+        public final ForgeConfigSpec.ConfigValue<Double> longDrawspeed;
+        public final ForgeConfigSpec.ConfigValue<Double> LongBowProjectileVelocity;
 
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_PATCH_TRIES;
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_XZ_SPREAD;
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_Y_SPREAD;
+
 
 
 
@@ -77,17 +106,17 @@ public class ABConfig {
             FLAX_XZ_SPREAD = BUILDER
                     .worldRestart()
                     .comment("Spawn flax on average every 'xz' chunks. Increases spawn frequency")
-                    .define("xz spread", xzspread);
+                    .define("Flax xz spread", xzspread);
 
             FLAX_Y_SPREAD = BUILDER
                     .worldRestart()
                     .comment("Spawn flax on average every 'y' chunks. Increases spawn frequency")
-                    .define("y spread", yspread);
+                    .define("Flax y spread", yspread);
 
             FLAX_PATCH_TRIES = BUILDER
                     .worldRestart()
                     .comment("How many attempts spawning flax. Increases spawn frequency")
-                    .define("attempts_per_patch", patchtries);
+                    .define("Flax attempts_per_patch", patchtries);
 
             heavyCrossbowDurability  = BUILDER
                     .worldRestart()
@@ -113,64 +142,62 @@ public class ABConfig {
                     .worldRestart()
                     .define("Long Bow durability", longbowDurability);
 
-
-            BUILDER.pop();
             heavyLoadTime = BUILDER
                     .comment("Arbalest Load Time, Default=35")
-                    .define("Arbalest load-time modifier", 35);
+                    .define("Arbalest load-time modifier", arbalestLoadTime);
 
             heavyAimTime = BUILDER
                     .comment("Arbalest Aim Time, Default=10")
-                    .define("Arbalest aim-time modifier", 10);
+                    .define("Arbalest aim-time modifier", arbalestAimTime);
 
             HeavyCrossbowProjectileVelocity = BUILDER
                     .comment("Multiplier for the projectile speed for projectiles shot from arbalest, Default=1.6")
-                    .define("Arbalest projectile speed multiplier", 1.6F);
+                    .define("Arbalest projectile speed multiplier", arbalestVelocity);
 
             smallLoadTime = BUILDER
                     .comment("Pistol Crossbow Load Time, Default=15")
-                    .define("Pistol Crossbow load-time modifier", 15);
+                    .define("Pistol Crossbow load-time modifier", pistolLoadTime);
 
             smallAimTime = BUILDER
                     .comment("Pistol Crossbow Aim Time, Default=10")
-                    .define("Pistol Crossbow aim-time modifier", 10);
+                    .define("Pistol Crossbow aim-time modifier", pistolAimTime);
 
             PistolCrossbowProjectileVelocity = BUILDER
                     .comment("Multiplier for the projectile speed for projectiles shot from  pistol crossbow, Default=0.85")
-                    .define("Pistol Crossbow projectile speed multiplier", 0.85F);
+                    .defineInRange("Pistol Crossbow projectile speed multiplier", pistolVelocity, 0.1D, Float.MAX_VALUE);
 
 
             shortDrawspeed = BUILDER
                     .comment("Short Bow Drawspeed, Default=10")
-                    .define("Short Bow drawspeed modifier", 10f);
+                    .defineInRange("Short Bow drawspeed modifier", shortbowSpeed, 0.1D, Float.MAX_VALUE);
 
             ShortBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from short bow, Default=1.6")
-                    .define("Short Bow projectile speed multiplier", 0.55F);
+                    .comment("Multiplier for the projectile speed for projectiles shot from short bow, Default=0.55")
+                    .defineInRange("Short Bow projectile speed multiplier", shortbowVelocity, 0.1D, Float.MAX_VALUE);
 
             recurveDrawspeed = BUILDER
                     .comment("Recurve Bow Drawspeed, Default=23")
-                    .define("Recurve Bow drawspeed modifier", 23f);
+                    .defineInRange("Recurve Bow drawspeed modifier", recurvebowSpeed, 0.1D, Float.MAX_VALUE);
 
             RecurveBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from recurve bow, Default=1.6")
-                    .define("Recurve Bow projectile speed multiplier", 1.25F);
+                    .comment("Multiplier for the projectile speed for projectiles shot from recurve bow, Default=1.25")
+                    .defineInRange("Recurve Bow projectile speed multiplier", recurveVelocity, 0.1D, Float.MAX_VALUE);
 
             flatDrawspeed = BUILDER
                     .comment("Flat Bow Drawspeed, Default=31")
-                    .define("Flat Bow drawspeed modifier", 31f);
+                    .defineInRange("Flat Bow drawspeed modifier", flatbowSpeed, 0.1D, Float.MAX_VALUE);
 
             FlatBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from flat bow, Default=1.6")
-                    .define("Flat Bow projectile speed multiplier", 1.5F);
+                    .comment("Multiplier for the projectile speed for projectiles shot from flat bow, Default=1.5")
+                    .defineInRange("Flat Bow projectile speed multiplier", flatbowVelocity, 0.1D, Float.MAX_VALUE);
 
             longDrawspeed = BUILDER
                     .comment("LongBow Drawspeed, Default=45")
-                    .define("Long Bow drawspeed modifier", 45f);
+                    .defineInRange("Long Bow drawspeed modifier", longbowSpeed, 0.1D, Float.MAX_VALUE);
 
             LongBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from long bow, Default=1.6")
-                    .define("Long Bow projectile speed multiplier", 1.75F);
+                    .comment("Multiplier for the projectile speed for projectiles shot from long bow, Default=1.75")
+                    .defineInRange("Long Bow projectile speed multiplier", longbowVelocity, 0.1D, Float.MAX_VALUE);
 
 
 

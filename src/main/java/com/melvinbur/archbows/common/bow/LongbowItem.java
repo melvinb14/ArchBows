@@ -4,6 +4,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.melvinbur.archbows.common.bow.BowProperties;
+import com.melvinbur.archbows.common.config.ABConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -29,12 +30,12 @@ public class LongbowItem extends BowItem {
     protected String modId;
 
 
-    public LongbowItem(Properties prop, Tiers material, float drawSpeed, float maxVelocity) {
+    public LongbowItem(Properties prop, Tiers material) {
         super(prop);
-        this.drawSpeed = drawSpeed;
+        this.drawSpeed = ABConfig.CONFIG.longDrawspeed.get().floatValue();
         this.modId = null;
         this.material = material;
-        this.maxVelocity = maxVelocity;
+        this.maxVelocity = ABConfig.CONFIG.LongBowProjectileVelocity.get().floatValue();
 
 
         if (FMLEnvironment.dist.isClient()) {

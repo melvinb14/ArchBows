@@ -1,6 +1,7 @@
 package com.melvinbur.archbows.common.bow;
 
 import com.melvinbur.archbows.common.bow.BowProperties;
+import com.melvinbur.archbows.common.config.ABConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -28,12 +29,12 @@ public class ShortbowItem extends BowItem {
     protected String modId;
 
 
-    public ShortbowItem(Properties prop, Tiers material, float drawSpeed, float maxVelocity) {
+    public ShortbowItem(Properties prop, Tiers material) {
         super(prop);
-        this.drawSpeed = drawSpeed;
+        this.drawSpeed = ABConfig.CONFIG.shortDrawspeed.get().floatValue();
         this.modId = null;
         this.material = material;
-        this.maxVelocity = maxVelocity;
+        this.maxVelocity = ABConfig.CONFIG.ShortBowProjectileVelocity.get().floatValue();
 
 
         if (FMLEnvironment.dist.isClient()) {
