@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " #X",
-    "# X",
     " #X"
+
   ],
   "key": {
     "#": {
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "archbows:flax_string"
+      "item": "minecraft:string"
     }
   },
   "result": {
