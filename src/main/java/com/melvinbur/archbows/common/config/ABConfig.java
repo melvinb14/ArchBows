@@ -39,7 +39,7 @@ public class ABConfig {
 
         public  static final int arbalestAimTime = 10;
 
-        public  static final double arbalestVelocity = 1.6F;
+        public  static final double arbalestVelocity = 1.45F;
 
         public  static final int pistolLoadTime = 15;
 
@@ -57,11 +57,11 @@ public class ABConfig {
 
         public  static final double flatbowSpeed = 31f;
 
-        public  static final double flatbowVelocity = 1.5F;
+        public  static final double flatbowVelocity = 1.35F;
 
         public  static final double longbowSpeed = 45f;
 
-        public  static final double longbowVelocity = 1.75F;
+        public  static final double longbowVelocity = 1.6F;
 
 
 
