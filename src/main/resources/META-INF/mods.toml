@@ -13,7 +13,7 @@ a Bow mod that extends the vanilla bow family
 [[dependencies.archbows]]
     modId="forge"
     mandatory=true
-    versionRange="[40,)"
+    versionRange="[43,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.archbows]]

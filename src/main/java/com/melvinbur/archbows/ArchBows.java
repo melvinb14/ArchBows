@@ -1,13 +1,14 @@
 package com.melvinbur.archbows;
 
 import com.melvinbur.archbows.common.config.ABConfig;
+import com.melvinbur.archbows.common.config.Config;
 import com.melvinbur.archbows.common.util.Logger;
 import com.melvinbur.archbows.core.BlockInit;
+import com.melvinbur.archbows.core.CompostablesInit;
 import com.melvinbur.archbows.core.ItemInit;
-import com.melvinbur.archbows.world.BiomeModifiersInit;
-import com.melvinbur.archbows.world.feature.PlacedFeaturesInit;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
+import com.melvinbur.archbows.world.ABBiomeModifiers;
+import com.melvinbur.archbows.world.ABConfiguredFeatures;
+import com.melvinbur.archbows.world.ABPlacements;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,79 +24,49 @@ import net.minecraftforge.fml.loading.FMLPaths;
 @Mod(ArchBows.MOD_ID)
 public class ArchBows {
     public static final String MOD_ID = "archbows";
-
-
-
-    // Directly reference a log4j logger.
     public static final Logger LOGGER = new Logger(MOD_ID);
+
     public ArchBows() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         //Register config
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "archbows-config.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "archbows-server.toml");
         ABConfig.loadConfig(ABConfig.CONFIG_SPEC,
-                FMLPaths.CONFIGDIR.get().resolve("archbows-config.toml").toString());
+                FMLPaths.CONFIGDIR.get().resolve("archbows-server.toml").toString());
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.CONFIG);
 
         ItemInit.register(eventBus);
         BlockInit.register(eventBus);
-        BiomeModifiersInit.register(eventBus);
-        PlacedFeaturesInit.register(eventBus);
-       // EntityInit.ENTITY_TYPES.register(eventBus);
 
 
+        ABBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(eventBus);
+        ABConfiguredFeatures.CONFIGURED_FEATURES.register(eventBus);
+        ABPlacements.PLACED_FEATURES.register(eventBus);
 
 
+        // EntityInit.ENTITY_TYPES.register(eventBus);
 
-
-
-
-
-
-
-        eventBus.addListener(this::setup);
+        eventBus.addListener(this::commonSetup);
         eventBus.addListener(this::clientSetup);
 
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
+    private void clientSetup(final FMLClientSetupEvent event) {
+    }
 
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(CompostablesInit::init);
 
-
-
+    }
 
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent evt) {
         LOGGER.debug("Debug Log.");
         LOGGER.error("Error Log.");
 
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-
-
-
-
-
-
-
-    }
-
-
-    private void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockInit.FLAX.getId(), BlockInit.POTTED_FLAX));
 
     }
 }

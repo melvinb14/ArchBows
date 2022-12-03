@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "archbows:block/flax"
+    "plant": "extendedflora:block/flax"
   },
   "render_type": "cutout"
 }

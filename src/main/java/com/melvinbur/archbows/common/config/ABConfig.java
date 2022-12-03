@@ -1,15 +1,21 @@
 package com.melvinbur.archbows.common.config;
 
+
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
+
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.File;
 
+
+
 public class ABConfig {
+
     public static final ArchBowsConfig CONFIG;
     public static final ForgeConfigSpec CONFIG_SPEC;
+
     static {
         final Pair<ArchBowsConfig, ForgeConfigSpec> serverSpecPair = new ForgeConfigSpec.Builder().configure(ArchBowsConfig::new);
         CONFIG = serverSpecPair.getLeft();
@@ -23,58 +29,20 @@ public class ABConfig {
         config.setConfig(file);
     }
 
+
+
+
     public static class ArchBowsConfig {
 
-        public  static final int xzspread = 6;
-        public  static final int yspread = 2;
-        public  static final int patchtries = 16;
-        public  static final int arbalestDurability = 625;
-        public  static final int pistolDurability = 415;
-        public  static final int shortbowDurability = 360;
-        public  static final int recurvebowDurability = 410;
-        public  static final int flatbowDurability = 435;
-        public  static final int longbowDurability = 455;
 
-        public  static final int arbalestLoadTime = 35;
-
-        public  static final int arbalestAimTime = 10;
-
-        public  static final double arbalestVelocity = 1.45F;
-
-        public  static final int pistolLoadTime = 15;
-
-        public  static final int pistolAimTime = 10;
-
-        public  static final double pistolVelocity = 0.85F;
-
-        public  static final double shortbowSpeed = 10f;
-
-        public  static final double shortbowVelocity = 0.55F;
-
-        public  static final double recurvebowSpeed = 23f;
-
-        public  static final double recurveVelocity = 1.25F;
-
-        public  static final double flatbowSpeed = 31f;
-
-        public  static final double flatbowVelocity = 1.35F;
-
-        public  static final double longbowSpeed = 45f;
-
-        public  static final double longbowVelocity = 1.6F;
-
-
-
-
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_PATCH_TRIES;
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_XZ_SPREAD;
-        public final ForgeConfigSpec.ConfigValue<Integer> FLAX_Y_SPREAD;
         public final ForgeConfigSpec.ConfigValue<Integer> heavyCrossbowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> pistolCrossbowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> shortBowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> recurveBowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> flatBowDurability;
         public final ForgeConfigSpec.ConfigValue<Integer> longBowDurability;
+
+
 
 
         public final ForgeConfigSpec.ConfigValue<Integer> heavyLoadTime;
@@ -92,126 +60,111 @@ public class ABConfig {
         public final ForgeConfigSpec.ConfigValue<Double> longDrawspeed;
         public final ForgeConfigSpec.ConfigValue<Double> LongBowProjectileVelocity;
 
-
-
-
-
+        public final ForgeConfigSpec.ConfigValue<Integer> flaxTries;
+        public final ForgeConfigSpec.ConfigValue<Integer> flaxXZspread;
+        public final ForgeConfigSpec.ConfigValue<Integer> flaxYspread;
 
 
         ArchBowsConfig(final ForgeConfigSpec.Builder BUILDER) {
-            BUILDER.push("Arch Bows");
-
-            BUILDER.push("requires-game-restart");
-
-            FLAX_XZ_SPREAD = BUILDER
-                    .worldRestart()
-                    .comment("Spawn flax on average every 'xz' chunks. Increases spawn frequency")
-                    .define("Flax xz spread", xzspread);
-
-            FLAX_Y_SPREAD = BUILDER
-                    .worldRestart()
-                    .comment("Spawn flax on average every 'y' chunks. Increases spawn frequency")
-                    .define("Flax y spread", yspread);
-
-            FLAX_PATCH_TRIES = BUILDER
-                    .worldRestart()
-                    .comment("How many attempts spawning flax. Increases spawn frequency")
-                    .define("Flax attempts_per_patch", patchtries);
-
-            heavyCrossbowDurability  = BUILDER
-                    .worldRestart()
-                    .define("Arbalest durability",  arbalestDurability);
-
-            pistolCrossbowDurability = BUILDER
-                    .worldRestart()
-                    .define("Pistol Crossbow durability", pistolDurability);
-
-            shortBowDurability = BUILDER
-                    .worldRestart()
-                    .define("Short Bow durability", shortbowDurability);
-
-            recurveBowDurability = BUILDER
-                    .worldRestart()
-                    .define("Recurve Bow durability", recurvebowDurability);
-
-            flatBowDurability = BUILDER
-                    .worldRestart()
-                    .define("Flat Bow durability", flatbowDurability);
-
-            longBowDurability = BUILDER
-                    .worldRestart()
-                    .define("Long Bow durability", longbowDurability);
-
-            heavyLoadTime = BUILDER
-                    .comment("Arbalest Load Time, Default=35")
-                    .define("Arbalest load-time modifier", arbalestLoadTime);
-
-            heavyAimTime = BUILDER
-                    .comment("Arbalest Aim Time, Default=10")
-                    .define("Arbalest aim-time modifier", arbalestAimTime);
-
-            HeavyCrossbowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from arbalest, Default=1.6")
-                    .define("Arbalest projectile speed multiplier", arbalestVelocity);
-
-            smallLoadTime = BUILDER
-                    .comment("Pistol Crossbow Load Time, Default=15")
-                    .define("Pistol Crossbow load-time modifier", pistolLoadTime);
-
-            smallAimTime = BUILDER
-                    .comment("Pistol Crossbow Aim Time, Default=10")
-                    .define("Pistol Crossbow aim-time modifier", pistolAimTime);
-
-            PistolCrossbowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from  pistol crossbow, Default=0.85")
-                    .defineInRange("Pistol Crossbow projectile speed multiplier", pistolVelocity, 0.1D, Float.MAX_VALUE);
 
 
-            shortDrawspeed = BUILDER
-                    .comment("Short Bow Drawspeed, Default=10")
-                    .defineInRange("Short Bow drawspeed modifier", shortbowSpeed, 0.1D, Float.MAX_VALUE);
+            BUILDER.comment("Configure weapons conditions")
+                    .push("weapons");
 
-            ShortBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from short bow, Default=0.55")
-                    .defineInRange("Short Bow projectile speed multiplier", shortbowVelocity, 0.1D, Float.MAX_VALUE);
+            heavyLoadTime = BUILDER.comment("Arbalest Load Time, Default=35")
+                    .define("arbalest_load-time_modifier", 35);
 
-            recurveDrawspeed = BUILDER
-                    .comment("Recurve Bow Drawspeed, Default=23")
-                    .defineInRange("Recurve Bow drawspeed modifier", recurvebowSpeed, 0.1D, Float.MAX_VALUE);
+            heavyAimTime = BUILDER.comment("Arbalest Aim Time, Default=10")
+                    .define("arbalest_aim-time_modifier", 10);
 
-            RecurveBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from recurve bow, Default=1.25")
-                    .defineInRange("Recurve Bow projectile speed multiplier", recurveVelocity, 0.1D, Float.MAX_VALUE);
+            HeavyCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from arbalest, Default=1.45")
+                    .defineInRange("arbalest_projectile_speed_multiplier", 1.45F, 0.1D, Float.MAX_VALUE);
 
-            flatDrawspeed = BUILDER
-                    .comment("Flat Bow Drawspeed, Default=31")
-                    .defineInRange("Flat Bow drawspeed modifier", flatbowSpeed, 0.1D, Float.MAX_VALUE);
+            smallLoadTime = BUILDER.comment("Pistol Crossbow Load Time, Default=15")
+                    .define("pistol_crossbow_load-time_modifier", 15);
 
-            FlatBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from flat bow, Default=1.5")
-                    .defineInRange("Flat Bow projectile speed multiplier", flatbowVelocity, 0.1D, Float.MAX_VALUE);
+            smallAimTime = BUILDER.comment("Pistol Crossbow Aim Time, Default=10")
+                    .define("pistol_crossbow_aim-time_modifier", 10);
 
-            longDrawspeed = BUILDER
-                    .comment("LongBow Drawspeed, Default=45")
-                    .defineInRange("Long Bow drawspeed modifier", longbowSpeed, 0.1D, Float.MAX_VALUE);
+            PistolCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from  pistol crossbow, Default=0.85")
+                    .defineInRange("pistol_crossbow_projectile_speed_multiplier", 0.85F, 0.1D, Float.MAX_VALUE);
 
-            LongBowProjectileVelocity = BUILDER
-                    .comment("Multiplier for the projectile speed for projectiles shot from long bow, Default=1.75")
-                    .defineInRange("Long Bow projectile speed multiplier", longbowVelocity, 0.1D, Float.MAX_VALUE);
+            shortDrawspeed = BUILDER.comment("Short Bow Drawspeed, Default=10")
+                    .defineInRange("short_bow_drawspeed_modifier", 10f, 0.1D, Float.MAX_VALUE);
 
+            ShortBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from short bow, Default=0.55")
+                    .defineInRange("short_bow_projectile_speed_multiplier", 0.55F, 0.1D, Float.MAX_VALUE);
 
+            recurveDrawspeed = BUILDER.comment("Recurve Bow Drawspeed, Default=23")
+                    .defineInRange("recurve_bow_drawspeed_modifier", 23f, 0.1D, Float.MAX_VALUE);
 
+            RecurveBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from recurve bow, Default=1.25")
+                    .defineInRange("recurve_bow_projectile_speed_multiplier", 1.25F, 0.1D, Float.MAX_VALUE);
+
+            flatDrawspeed = BUILDER.comment("Flat Bow Drawspeed, Default=31")
+                    .defineInRange("flat_bow_drawspeed_modifier", 31f, 0.1D, Float.MAX_VALUE);
+
+            FlatBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from flat bow, Default=1.35")
+                    .defineInRange("flat_bow_projectile_speed_multiplier", 1.35F, 0.1D, Float.MAX_VALUE);
+
+            longDrawspeed = BUILDER.comment("LongBow Drawspeed, Default=45")
+                    .defineInRange("long_bow_drawspeed_modifier", 45f, 0.1D, Float.MAX_VALUE);
+
+            LongBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from long bow, Default=1.6")
+                    .defineInRange("long_bow_projectile_speed_multiplier", 1.6F, 0.1D, Float.MAX_VALUE);
 
             BUILDER.pop();
 
+            BUILDER.push("requires-game-restart");
+
+            BUILDER.comment("Configure weapons conditions")
+                    .push("weapons");
+
+            heavyCrossbowDurability = BUILDER
+                    .worldRestart()
+                    .define("Arbalest_durability", 625);
+
+            pistolCrossbowDurability = BUILDER
+                    .worldRestart()
+                    .define("pistol_crossbow_durability", 415);
+
+            shortBowDurability = BUILDER
+                    .worldRestart()
+                    .define("short_bow_durability", 360);
+
+            recurveBowDurability = BUILDER
+                    .worldRestart()
+                    .define("recurve_bow_durability", 410);
+
+            flatBowDurability = BUILDER
+                    .worldRestart()
+                    .define("flat_bow_durability", 435);
+
+            longBowDurability = BUILDER
+                    .worldRestart()
+                    .define("long_bow_durability", 455);
 
 
+            BUILDER.pop();
+            BUILDER.comment("World Generation");
 
-
+            flaxTries = BUILDER.comment("Default=15")
+                    .worldRestart()
+                    .define("flax_tries", 15);
+            flaxXZspread =  BUILDER.comment("Default=2")
+                    .worldRestart()
+                    .define("flax_xz_spread", 2);
+            flaxYspread =  BUILDER.comment("Default=3")
+                    .worldRestart()
+                    .define("flax_y_spread", 3);
+            BUILDER.pop();
 
 
         }
     }
-
 }
+
+
+
+
 

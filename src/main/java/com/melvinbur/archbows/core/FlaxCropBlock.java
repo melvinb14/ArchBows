@@ -5,8 +5,9 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import org.jetbrains.annotations.NotNull;
 
-    public class FlaxCropBlock extends CropBlock {
+public class FlaxCropBlock extends CropBlock {
         public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 
         public FlaxCropBlock(Properties properties) {
@@ -19,7 +20,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
         }
 
         @Override
-        protected ItemLike getBaseSeedId() {
+        protected @NotNull ItemLike getBaseSeedId() {
             return ItemInit.FLAX_SEEDS.get();
         }
     }

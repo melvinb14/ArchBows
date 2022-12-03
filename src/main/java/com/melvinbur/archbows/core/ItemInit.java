@@ -44,17 +44,19 @@ public class ItemInit {
 
 
     //Items
-    public static final RegistryObject<Item> FLAX_FIBER = ITEMS.register("flax_fiber",
-            () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
-
     public static final RegistryObject<Item> FLAX_STRING= ITEMS.register("flax_string",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
     public static final RegistryObject<Item> LINEN_STRING = ITEMS.register("linen_string",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
+
+    public static final RegistryObject<Item> FLAX_FIBER = ITEMS.register("flax_fiber",
+            () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
+
     public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
             () -> new ItemNameBlockItem(BlockInit.FLAX_CROP.get(),
                     new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
+
 /**
     public static final BoltItem bolt = new BoltItem("bolt",
             Config.INSTANCE.bolt.baseDamage.get().floatValue(), Config.INSTANCE.bolt.rangeMultiplier.get().floatValue(),

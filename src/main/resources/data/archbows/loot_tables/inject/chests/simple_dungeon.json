@@ -6,20 +6,6 @@
       "entries": [
         {
           "type": "item",
-          "name": "archbows:twig",
-          "weight": 9,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "name": "archbows:flax_fiber",
           "weight": 9,
           "functions": [

@@ -4,18 +4,31 @@
   "item.archbows.recurve": "Recurve Bow",
   "item.archbows.shortbow": "Short Bow",
   "item.archbows.flatbow": "Flat Bow",
-
   "item.archbows.arbalest": "Arbalest",
   "item.archbows.pistol_crossbow": "Pistol Crossbow",
 
-  "block.archbows.flax": "Flax",
-  "item.archbows.flax_seeds": "Flax Seeds",
-  "block.archbows.flax_crop": "Flax",
-
-  "item.archbows.flax_fiber": "Flax Fiber",
   "item.archbows.flax_string": "Flax String",
   "item.archbows.linen_string": "Linen String",
-  "block.archbows.twig": "Twig",
+  "item.archbows.flax_seeds": "Flax Seeds",
+  "item.archbows.flax_fiber": "Bundle of Flax",
+
+
+  "item.archbows.flax": "Flax",
+  "item.archbows.potted_flax": "Potted Flax",
+
+  "block.archbows.flax": "Flax",
+  "block.archbows.potted_flax": "Potted Flax",
+
+
+
+
+
+
+
+
+
+
+
 
   "item.archbows.bolt": "Bolt",
   "item.archbows.bolt_spectral": "Spectral Bolt",
