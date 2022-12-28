@@ -143,20 +143,10 @@ public class LongbowItem extends BowItem {
     }
 
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        boolean isShiftPressed = Screen.hasShiftDown();
-        if (isShiftPressed) {
-            tooltip.add((Component.translatable(String.format("tooltip.%s.description", "archbows"), (Component.translatable("tooltip.archbows.showing_details")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-            tooltip.add((Component.translatable(String.format("tooltip.archbows.heavy_crossbow.desc_5", "archbows")).withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
-            tooltip.add((Component.translatable(String.format("tooltip.archbows.longbow.desc", "archbows")) .withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
-            tooltip.add((Component.translatable(String.format("tooltip.archbows.heavy_crossbow.desc_4", "archbows")).withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
             tooltip.add(Component.literal(""));
-            tooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.ammo.type", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.ammo.arrow", "archbows"))).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
             tooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), (double) drawSpeed / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
             tooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.longbow.speed_multiplier", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), this.maxVelocity)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
             tooltip.add(Component.literal(""));
-        } else {
-            tooltip.add((Component.translatable(String.format("tooltip.%s.description", "archbows"), (Component.translatable("tooltip.archbows.show_details", ChatFormatting.AQUA.toString() + "SHIFT")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-        }
 
 
 

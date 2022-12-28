@@ -415,20 +415,11 @@ public class  PistolCrossbowItem extends CrossbowItem {
             }
         }
 
-                    boolean isShiftPressed = Screen.hasShiftDown();
-                    if (isShiftPressed) {
-                        pTooltip.add((Component.translatable(String.format("tooltip.%s.description", "archbows"), (Component.translatable("tooltip.archbows.showing_details")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-                        pTooltip.add((Component.translatable(String.format("tooltip.archbows.small_crossbow.desc_6", "archbows")).withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
-                        pTooltip.add((Component.translatable(String.format("tooltip.archbows.small_crossbow.desc_1", "archbows")).withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
                         pTooltip.add(Component.literal(""));
-                        pTooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.ammo.type", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.ammo.arrow&firework", "archbows"))).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
-                        pTooltip.add((Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time.value", "archbows"), (float) loadTicks / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
+                       pTooltip.add((Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.load_time.value", "archbows"), (float) loadTicks / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add((Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.aim_time", "archbows"), (Component.translatable(String.format("tooltip.archbows.modifiers.heavy_crossbow.aim_time.value", "archbows"), (float) aimTicks / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add((Component.translatable(String.format("tooltip.%s.modifiers.longbow.speed_multiplier", "archbows"), (Component.translatable(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"),  maxVelocity)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
                         pTooltip.add(Component.literal(""));
-                    } else {
-                        pTooltip.add((Component.translatable(String.format("tooltip.%s.description", "archbows"), (Component.translatable("tooltip.archbows.show_details", ChatFormatting.AQUA.toString() + "SHIFT")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-                    }
 
 
                 }
