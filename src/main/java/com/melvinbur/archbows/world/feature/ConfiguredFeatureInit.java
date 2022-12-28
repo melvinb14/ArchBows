@@ -14,7 +14,7 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 public class ConfiguredFeatureInit {
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLAX =
             FeatureUtils.register("flower_flax", Feature.FLOWER,
-                    new RandomPatchConfiguration(ABConfig.CONFIG.FLAX_PATCH_TRIES.get(), ABConfig.CONFIG.FLAX_XZ_SPREAD.get(), ABConfig.CONFIG.FLAX_Y_SPREAD.get(), PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                    new RandomPatchConfiguration(ABConfig.CONFIG.flaxTries.get(), ABConfig.CONFIG.flaxXZspread.get(), ABConfig.CONFIG.flaxYspread.get(), PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.FLAX.get())))));
 
 

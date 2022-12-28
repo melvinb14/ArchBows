@@ -3,7 +3,7 @@ package com.melvinbur.archbows.core;
 import com.melvinbur.archbows.ArchBows;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,22 +33,10 @@ public class BlockInit {
     public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
-    public static final RegistryObject<Block> TWIG = registerBlock("twig",
-            () -> new TwigBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),CreativeModeTabInit.ARCHBOWS_TAB);
 
 
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
-        return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
-    }
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

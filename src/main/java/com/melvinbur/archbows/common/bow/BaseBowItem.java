@@ -138,10 +138,11 @@ public class BaseBowItem extends BowItem {
         return this.material.getRepairIngredient().test(repair);
     }
 
-
     public float getNockProgress(ItemStack stack, LivingEntity shooter) {
         return (float) (stack.getUseDuration() - shooter.getUseItemRemainingTicks()) / (20.0F * this.drawSpeed);
     }
+
+
 
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         tooltip.add(new TextComponent(""));

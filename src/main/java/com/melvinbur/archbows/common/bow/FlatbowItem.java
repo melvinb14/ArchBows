@@ -130,15 +130,6 @@ public class FlatbowItem extends BowItem {
         return f;
     }
 
-    public int getEnchantmentValue() {
-        return this.material.getEnchantmentValue();
-    }
-
-    public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {
-        return this.material.getRepairIngredient().test(repair);
-    }
-
-
     public float getNockProgress(ItemStack stack, LivingEntity shooter) {
         return (float) (stack.getUseDuration() - shooter.getUseItemRemainingTicks()) / (20.0F * this.drawSpeed);
     }

@@ -81,7 +81,7 @@ public class ArchBows {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_FLAX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.TWIG.get(), RenderType.translucent());
+
 
 
 
