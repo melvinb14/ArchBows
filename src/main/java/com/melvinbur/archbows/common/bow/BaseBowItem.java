@@ -144,18 +144,11 @@ public class BaseBowItem extends BowItem {
     }
 
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        boolean isShiftPressed = Screen.hasShiftDown();
-        if (isShiftPressed) {
-            tooltip.add((new TranslatableComponent(String.format("tooltip.%s.description", "archbows"), (new TranslatableComponent("tooltip.archbows.showing_details")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-            tooltip.add((new TranslatableComponent(String.format("tooltip.archbows.basebow.desc", "archbows")).withStyle(ChatFormatting.GRAY)).withStyle(ChatFormatting.ITALIC));
-            tooltip.add(new TextComponent(""));
-            tooltip.add((new TranslatableComponent(String.format("tooltip.%s.modifiers.ammo.type", "archbows"), (new TranslatableComponent(String.format("tooltip.%s.modifiers.ammo.arrow", "archbows"))).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
-            tooltip.add((new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.draw_length", "archbows"), (new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), (double) drawSpeed / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
+        tooltip.add(new TextComponent(""));
+           tooltip.add((new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.draw_length", "archbows"), (new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), (double) drawSpeed / 20)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
             tooltip.add((new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.speed_multiplier", "archbows"), (new TranslatableComponent(String.format("tooltip.%s.modifiers.longbow.draw_length.value", "archbows"), this.maxVelocity)).withStyle(ChatFormatting.GRAY))).withStyle(ChatFormatting.DARK_GREEN));
             tooltip.add(new TextComponent(""));
-        } else {
-            tooltip.add((new TranslatableComponent(String.format("tooltip.%s.description", "archbows"), (new TranslatableComponent("tooltip.archbows.show_details", ChatFormatting.AQUA.toString() + "SHIFT")).withStyle(ChatFormatting.DARK_GRAY))).withStyle(ChatFormatting.GOLD));
-        }
+
 
 
 
