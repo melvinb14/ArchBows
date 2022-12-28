@@ -60,33 +60,11 @@
   "item.archbows.proj_tipped.effect.slow_falling": "%s of Slow Falling",
 
 
-  "tooltip.archbows.show_details": "[Press %s to show details]",
-  "tooltip.archbows.showing_details": "[Showing details]",
-  "tooltip.archbows.description": "Stats: %s",
-  "tooltip.archbows.show_description": "[Press %s to show stats]",
-  "tooltip.archbows.showing_description": "[Showing stats]",
-  "tooltip.archbows.longbow.desc": "Long-range version of the standard bow",
-  "tooltip.archbows.shortbow.desc": "Short-range version of the standard bow",
-  "tooltip.archbows.basebow.desc": "Modified version of the standard bow",
-  "tooltip.archbows.shortbow.desc_1": "Low damage & Close-ranged",
-  "tooltip.archbows.longbow.desc_2": "Takes longer to draw fully",
-  "tooltip.archbows.heavy_crossbow.desc": "High damage & Long-ranged",
-  "tooltip.archbows.small_crossbow.desc_1": "Low damage & Mid-ranged",
-  "tooltip.archbows.heavy_crossbow.desc_2": "Aiming after loading improves accuracy",
-  "tooltip.archbows.heavy_crossbow.desc_3": "Hold the aim for a pinpoint shot",
-  "tooltip.archbows.heavy_crossbow.desc_4": "Can be inaccurate",
-  "tooltip.archbows.heavy_crossbow.desc_5": "Used in large scale battles",
-  "tooltip.archbows.small_crossbow.desc_6": "Used in assassination",
-  "tooltip.archbows.heavy_crossbow.loaded_bolt": "Loaded with: %s",
 
 
 
 
-  "tooltip.archbows.modifiers": "Modifiers:",
-  "tooltip.archbows.modifiers.ammo.type": "Projectile Type: %s",
-  "tooltip.archbows.modifiers.ammo.arrow": "Arrows",
-  "tooltip.archbows.modifiers.ammo.arrow&firework": "Arrows & Firework",
-  "tooltip.archbows.modifiers.ammo.bolt": "Bolts",
+
   "tooltip.archbows.modifiers.longbow.draw_length": "Draw Time: %s",
   "tooltip.archbows.modifiers.longbow.draw_length.value": "%.2fs",
   "tooltip.archbows.modifiers.longbow.speed_multiplier": "Arrow Speed: %s",
