@@ -26,23 +26,29 @@ public class ItemInit {
 
     //Bows
     public static final RegistryObject<ShortbowItem> SHORT_BOW = ITEMS.register("shortbow",
-            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.shortBowDurability.get()), WOOD));
+            () -> new ShortbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.shortBowDurability.get()), ABConfig.CONFIG.shortbowDrawspeed.get().floatValue(),  ABConfig.CONFIG.ShortBowProjectileVelocity.get().floatValue(), WOOD));
     public static final RegistryObject<BaseBowItem> RECURVE_BOW = ITEMS.register("recurve",
-            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.recurveBowDurability.get()), WOOD));
+            () -> new BaseBowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.recurveBowDurability.get()),ABConfig.CONFIG.recurvebowDrawspeed.get().floatValue(),  ABConfig.CONFIG.RecurveBowProjectileVelocity.get().floatValue(), WOOD));
 
     public static final RegistryObject<FlatbowItem> FLAT_BOW = ITEMS.register("flatbow",
-            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.flatBowDurability.get()), WOOD));
+            () -> new FlatbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.flatBowDurability.get()),ABConfig.CONFIG.flatbowDrawspeed.get().floatValue(),  ABConfig.CONFIG.FlatBowProjectileVelocity.get().floatValue(), WOOD));
 
     public static final RegistryObject<LongbowItem> LONG_BOW  = ITEMS.register("longbow",
-            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.longBowDurability.get()), WOOD));
+            () -> new LongbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.longBowDurability.get()),ABConfig.CONFIG.longbowDrawspeed.get().floatValue(),  ABConfig.CONFIG.LongBowProjectileVelocity.get().floatValue(), WOOD));
 
 
     //Crossbows
-    public static final RegistryObject<HeavyCrossbowItem> ARBALEST = ITEMS.register("arbalest",
-            () -> new HeavyCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.heavyCrossbowDurability.get()), IRON));
+
+    public static final RegistryObject<ArbalestItem> ARBALEST = ITEMS.register("arbalest",
+            () -> new ArbalestItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.arbalestDurability.get()),ABConfig.CONFIG.ArbalestProjectileVelocity.get().floatValue(),ABConfig.CONFIG.arbalestLoadTime.get(),ABConfig.CONFIG.arbalestAimTime.get(), IRON));
+
+    public static final RegistryObject<HeavyCrossbowItem> HEAVY_CROSSBOW = ITEMS.register("heavy_crossbow",
+            () -> new HeavyCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.heavyCrossbowDurability.get()), ABConfig.CONFIG.HeavyCrossbowProjectileVelocity.get().floatValue(),ABConfig.CONFIG.heavycrossbowLoadTime.get(),ABConfig.CONFIG.heavycrossbowAimTime.get(), WOOD));
+
 
     public static final RegistryObject<PistolCrossbowItem> PISTOL_CROSSBOW = ITEMS.register("pistol_crossbow",
-            () -> new PistolCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.pistolCrossbowDurability.get()), IRON));
+            () -> new PistolCrossbowItem(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB).stacksTo(1).durability(ABConfig.CONFIG.pistolCrossbowDurability.get()),ABConfig.CONFIG.PistolCrossbowProjectileVelocity.get().floatValue(),ABConfig.CONFIG.pistolcrossbowLoadTime.get(),ABConfig.CONFIG.pistolcrossbowAimTime.get(), IRON));
+
 
 
     //Items

@@ -1,13 +1,10 @@
 package com.melvinbur.archbows.common.bow;
 
 import com.google.common.collect.Lists;
-
-import com.melvinbur.archbows.common.config.ABConfig;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
-
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
@@ -38,7 +35,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 
-public class HeavyCrossbowItem extends CrossbowItem  {
+public class ArbalestItem extends CrossbowItem  {
 
     private static final String TAG_CHARGED = "Charged";
     private static final String TAG_CHARGED_PROJECTILES = "ChargedProjectiles";
@@ -60,10 +57,10 @@ public class HeavyCrossbowItem extends CrossbowItem  {
 
 
 
-    public HeavyCrossbowItem(Properties prop, float maxVelocity, int heavyLoadTime, int heavyAimTime, Tiers material) {
+    public ArbalestItem(Properties prop, float maxVelocity, int heavyLoadTime, int heavyAimTime, Tiers material) {
         super(prop);
         this.modId = null;
-        HeavyCrossbowItem.maxVelocity = maxVelocity;
+        ArbalestItem.maxVelocity = maxVelocity;
         loadTicks = heavyLoadTime;
         aimTicks = heavyAimTime;
         this.material = material;

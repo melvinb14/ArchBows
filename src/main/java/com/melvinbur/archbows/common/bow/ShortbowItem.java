@@ -30,12 +30,12 @@ public class ShortbowItem extends BowItem {
     protected String modId;
 
 
-    public ShortbowItem(Properties prop, Tiers material) {
+    public ShortbowItem(Properties prop, float drawSpeed,float maxVelocity, Tiers material) {
         super(prop);
-        this.drawSpeed = ABConfig.CONFIG.shortDrawspeed.get().floatValue();
+        this.drawSpeed = drawSpeed;
         this.modId = null;
         this.material = material;
-        this.maxVelocity = ABConfig.CONFIG.ShortBowProjectileVelocity.get().floatValue();
+        this.maxVelocity = maxVelocity;
 
 
         if (FMLEnvironment.dist.isClient()) {

@@ -31,12 +31,12 @@ public class LongbowItem extends BowItem {
     protected String modId;
 
 
-    public LongbowItem(Properties prop, Tiers material) {
+    public LongbowItem(Properties prop, float drawSpeed,float maxVelocity, Tiers material) {
         super(prop);
-        this.drawSpeed = ABConfig.CONFIG.longDrawspeed.get().floatValue();
+        this.drawSpeed = drawSpeed;
         this.modId = null;
         this.material = material;
-        this.maxVelocity = ABConfig.CONFIG.LongBowProjectileVelocity.get().floatValue();
+        this.maxVelocity = maxVelocity;
 
 
         if (FMLEnvironment.dist.isClient()) {

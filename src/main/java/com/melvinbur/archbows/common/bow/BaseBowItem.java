@@ -30,12 +30,12 @@ public class BaseBowItem extends BowItem {
     protected String modId;
 
 
-    public BaseBowItem(Properties prop, Tiers material) {
+    public BaseBowItem(Properties prop, float drawSpeed,float maxVelocity, Tiers material) {
         super(prop);
-        this.drawSpeed = ABConfig.CONFIG.recurveDrawspeed.get().floatValue();
+        this.drawSpeed = drawSpeed;
         this.modId = null;
         this.material = material;
-        this.maxVelocity = ABConfig.CONFIG.RecurveBowProjectileVelocity.get().floatValue();
+        this.maxVelocity = maxVelocity;
 
 
         if (FMLEnvironment.dist.isClient()) {

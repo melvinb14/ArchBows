@@ -7,19 +7,19 @@
   ],
   "key": {
     "~": {
-      "item": "archbows:linen_string"
+      "item": "archbows:flax_string"
     },
     "#": {
       "item": "minecraft:stick"
     },
     "Y": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:stick"
     },
     "$": {
       "item": "minecraft:tripwire_hook"
     }
   },
   "result": {
-    "item": "archbows:arbalest"
+    "item": "archbows:heavy_crossbow"
   }
 }

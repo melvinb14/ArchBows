@@ -10,6 +10,7 @@ public class CompostablesInit {
         //Plants & Bushes
 
         setCompostInfo(BlockInit.WILD_FLAX.get(), 0.45F);
+        setCompostInfo(BlockInit.WILD_FLAX2.get(), 0.45F);
         setCompostInfo(ItemInit.FLAX.get(), 0.25F);
         setCompostInfo(ItemInit.FLAX_SEEDS.get(), 0.1F);
 

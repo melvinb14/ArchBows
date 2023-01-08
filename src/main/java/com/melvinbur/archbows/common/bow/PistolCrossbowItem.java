@@ -50,23 +50,23 @@ public class  PistolCrossbowItem extends CrossbowItem {
     private static final float MID_SOUND_PERCENT = 0.5F;
     private static final float ARROW_POWER = 3.15F;
     private static final float FIREWORK_POWER = 1.6F;
+    private boolean startSoundPlayed = false;
+    private boolean midLoadSoundPlayed = false;
     protected Tiers material;
     protected String modId;
     protected static int loadTicks;
     protected static int aimTicks;
 
-    protected static float maxVelocity;
-    private boolean startSoundPlayed = false;
-    private boolean midLoadSoundPlayed = false;
+    protected static float  maxVelocity;
 
 
-    public PistolCrossbowItem(Properties prop, Tiers material) {
+    public PistolCrossbowItem(Properties prop, float maxVelocity, int heavyLoadTime, int heavyAimTime, Tiers material) {
         super(prop);
         this.modId = null;
+        PistolCrossbowItem.maxVelocity = maxVelocity;
+        loadTicks = heavyLoadTime;
+        aimTicks = heavyAimTime;
         this.material = material;
-        maxVelocity =  ABConfig.CONFIG.PistolCrossbowProjectileVelocity.get().floatValue();
-        loadTicks = ABConfig.CONFIG.smallLoadTime.get();
-        aimTicks = ABConfig.CONFIG.smallAimTime.get();
 
 
 

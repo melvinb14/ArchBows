@@ -6,6 +6,7 @@
   "item.archbows.flatbow": "Flat Bow",
   "item.archbows.arbalest": "Arbalest",
   "item.archbows.pistol_crossbow": "Pistol Crossbow",
+  "item.archbows.heavy_crossbow": "Heavy Crossbow",
 
   "item.archbows.flax_string": "Flax String",
   "item.archbows.linen_string": "Linen String",
@@ -63,11 +64,6 @@
   "item.archbows.proj_tipped.effect.slow_falling": "%s of Slow Falling",
 
 
-
-
-
-
-
   "tooltip.archbows.modifiers.longbow.draw_length": "Draw Time: %s",
   "tooltip.archbows.modifiers.longbow.draw_length.value": "%.2fs",
   "tooltip.archbows.modifiers.longbow.speed_multiplier": "Arrow Speed: %s",
@@ -85,14 +81,6 @@
   "tooltip.archbows.modifiers.projectile.impact.explosion": "Explodes on impact",
   "tooltip.archbows.modifiers.projectile.impact.glowing": "Inflicts Glowing on hit mob",
   "tooltip.archbows.modifiers.max_stack_size": "Max Stack Size: %d",
-
-
-
-  
-
- 
-
-  
 
   "tooltip.archbows.enabled": "Enabled",
   "tooltip.archbows.disabled": "Disabled",

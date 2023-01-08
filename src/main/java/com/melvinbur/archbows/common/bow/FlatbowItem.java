@@ -30,12 +30,12 @@ public class FlatbowItem extends BowItem {
     protected String modId;
 
 
-    public FlatbowItem(Properties prop, Tiers material) {
+    public FlatbowItem(Properties prop, float drawSpeed,float maxVelocity, Tiers material) {
         super(prop);
-        this.drawSpeed = ABConfig.CONFIG.flatDrawspeed.get().floatValue();
+        this.drawSpeed = drawSpeed;
         this.modId = null;
         this.material = material;
-        this.maxVelocity = ABConfig.CONFIG.FlatBowProjectileVelocity.get().floatValue();
+        this.maxVelocity = maxVelocity;
 
 
         if (FMLEnvironment.dist.isClient()) {
