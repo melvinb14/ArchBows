@@ -1,5 +1,6 @@
 package com.melvinbur.archbows;
 
+
 import com.melvinbur.archbows.common.config.ABConfig;
 import com.melvinbur.archbows.common.config.Config;
 import com.melvinbur.archbows.common.util.Logger;
@@ -35,6 +36,8 @@ public class ArchBows {
                 FMLPaths.CONFIGDIR.get().resolve("archbows-server.toml").toString());
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.CONFIG);
+
+
 
         ItemInit.register(eventBus);
         BlockInit.register(eventBus);

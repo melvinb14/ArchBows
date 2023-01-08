@@ -23,16 +23,18 @@ public class BlockInit {
 
 
     /* CROPS */
-    public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
+    public static final RegistryObject<Block> FLAX = BLOCKS.register("flax",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
 
 
-    public static final RegistryObject<Block> FLAX = registerBlock("flax", OverworldFlowerBlock::new);
 
+    public static final RegistryObject<Block> WILD_FLAX = registerBlock("wild_flax", WildFlaxBlock::new);
+    public static final RegistryObject<Block> WILD_FLAX2 = registerBlock("wild_flax2", WildFlax2Block::new);
 
     /* MISC */
-  public static final RegistryObject<Block> POTTED_FLAX = registerBlockWithoutItem("potted_flax", () -> createFlowerPot(FLAX.get()));
+  public static final RegistryObject<Block> POTTED_FLAX = registerBlockWithoutItem("potted_flax", () -> createFlowerPot(WILD_FLAX.get()));
+    public static final RegistryObject<Block> POTTED_FLAX2 = registerBlockWithoutItem("potted_flax2", () -> createFlowerPot(WILD_FLAX2.get()));
 
 
 

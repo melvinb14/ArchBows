@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "archbows:item/flax"
+    "layer0": "archbows:block/wild_flax0"
   }
 }

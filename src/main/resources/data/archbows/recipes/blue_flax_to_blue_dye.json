@@ -7,11 +7,11 @@
     ],
     "key": {
         "#": {
-            "item": "archbows:flax"
+            "item": "archbows:wild_flax"
         }
     },
     "result": {
-        "item": "archbows:flax_seeds",
-        "count": 1
+        "item": "minecraft:blue_dye",
+        "count": 2
     }
 }

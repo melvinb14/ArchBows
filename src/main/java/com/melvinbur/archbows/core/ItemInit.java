@@ -2,8 +2,10 @@ package com.melvinbur.archbows.core;
 
 import com.melvinbur.archbows.ArchBows;
 import com.melvinbur.archbows.common.bow.*;
+
 import com.melvinbur.archbows.common.config.ABConfig;
-import com.melvinbur.archbows.common.test.TestCrossbow;
+import com.melvinbur.archbows.common.config.Config;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 
@@ -50,11 +52,11 @@ public class ItemInit {
     public static final RegistryObject<Item> LINEN_STRING = ITEMS.register("linen_string",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
-    public static final RegistryObject<Item> FLAX_FIBER = ITEMS.register("flax_fiber",
+    public static final RegistryObject<Item> FLAX = ITEMS.register("flax",
             () -> new Item(new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
     public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
-            () -> new ItemNameBlockItem(BlockInit.FLAX_CROP.get(),
+            () -> new ItemNameBlockItem(BlockInit.FLAX.get(),
                     new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
 
 /**

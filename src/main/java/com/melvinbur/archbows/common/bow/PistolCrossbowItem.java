@@ -2,12 +2,14 @@ package com.melvinbur.archbows.common.bow;
 
 
 import com.google.common.collect.Lists;
+
 import com.melvinbur.archbows.common.config.ABConfig;
+import com.melvinbur.archbows.common.config.Config;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.client.gui.screens.Screen;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;

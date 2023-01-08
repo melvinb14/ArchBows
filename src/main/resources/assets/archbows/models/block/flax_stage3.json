@@ -1,7 +1,7 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "archbows:block/flax"
+        "crop": "archbows:block/flax_crop_stage3"
     },
     "render_type": "cutout"
 }

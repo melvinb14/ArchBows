@@ -10,14 +10,17 @@
   "item.archbows.flax_string": "Flax String",
   "item.archbows.linen_string": "Linen String",
   "item.archbows.flax_seeds": "Flax Seeds",
-  "item.archbows.flax_fiber": "Bundle of Flax",
 
 
   "item.archbows.flax": "Flax",
-  "item.archbows.potted_flax": "Potted Flax",
+  "item.archbows.wild_flax": "Blue Flax",
+  "item.archbows.wild_flax2": "Blue Flax",
+  "item.archbows.potted_flax": "Potted Blue Flax",
+  "item.archbows.potted_flax2": "Potted Blue Flax",
 
   "block.archbows.flax": "Flax",
-  "block.archbows.potted_flax": "Potted Flax",
+  "block.archbows.potted_flax": "Potted Blue Flax",
+  "block.archbows.potted_flax2": "Potted Blue Flax",
 
 
 

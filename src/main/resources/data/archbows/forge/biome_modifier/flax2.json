@@ -1,0 +1,19 @@
+{
+  "type": "archbows:biome_modifier_serializer",
+  "biomes": [
+    "#forge:is_sandy",
+    "#forge:is_desert",
+    []
+  ],
+  "blacklist": [
+    [
+      "minecraft:beach",
+      "minecraft:badlands",
+      "minecraft:wooded_badlands"
+    ]
+  ],
+  "configOption": "enableDesertFlax",
+  "decoration": "vegetal_decoration",
+  "dimension": "minecraft:is_overworld",
+  "feature": "archbows:flax2"
+}

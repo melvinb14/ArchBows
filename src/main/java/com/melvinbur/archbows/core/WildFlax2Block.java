@@ -7,15 +7,16 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraftforge.common.PlantType;
 
-public class OverworldFlowerBlock extends FlowerBlock {
+public class WildFlax2Block extends FlowerBlock {
 
-
-    public OverworldFlowerBlock() {
+    public WildFlax2Block() {
         super(MobEffects.SATURATION, 2, Properties.copy(Blocks.DANDELION));
     }
 
 
 
-
+    @Override
+    public PlantType getPlantType(BlockGetter world, BlockPos pos) {
+        return PlantType.DESERT;
+    }
 }
-

@@ -1,15 +1,15 @@
 {
   "type": "archbows:biome_modifier_serializer",
   "biomes": [
-    "minecraft:plains",
+    "#forge:is_plains",
     []
   ],
   "blacklist": [
     [
     ]
   ],
-  "configOption": "enableFlax",
+  "configOption": "enablePlainsFlax",
   "decoration": "vegetal_decoration",
   "dimension": "minecraft:is_overworld",
-  "feature": "archbows:flax"
+  "feature": "archbows:flax1"
 }

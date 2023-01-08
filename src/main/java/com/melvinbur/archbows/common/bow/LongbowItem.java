@@ -3,10 +3,11 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.melvinbur.archbows.common.bow.BowProperties;
+
 import com.melvinbur.archbows.common.config.ABConfig;
+import com.melvinbur.archbows.common.config.Config;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

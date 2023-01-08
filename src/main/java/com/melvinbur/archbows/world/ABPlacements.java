@@ -25,7 +25,9 @@ public class ABPlacements {
 
     
     // Overworld
-   public static final RegistryObject<PlacedFeature> FLAX = register("flax", ABConfiguredFeatures.FLAX, List.of(RarityFilter.onAverageOnceEvery(33), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+   public static final RegistryObject<PlacedFeature> FLAX = register("flax1", ABConfiguredFeatures.FLAX, List.of(RarityFilter.onAverageOnceEvery(33), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+    public static final RegistryObject<PlacedFeature> FLAX2 = register("flax2", ABConfiguredFeatures.FLAX2, List.of(RarityFilter.onAverageOnceEvery(33), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
 
 
 

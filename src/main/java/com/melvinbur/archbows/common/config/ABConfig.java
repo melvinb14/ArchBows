@@ -60,9 +60,12 @@ public class ABConfig {
         public final ForgeConfigSpec.ConfigValue<Double> longDrawspeed;
         public final ForgeConfigSpec.ConfigValue<Double> LongBowProjectileVelocity;
 
-        public final ForgeConfigSpec.ConfigValue<Integer> flaxTries;
-        public final ForgeConfigSpec.ConfigValue<Integer> flaxXZspread;
-        public final ForgeConfigSpec.ConfigValue<Integer> flaxYspread;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax1Tries;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax1XZspread;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax1Yspread;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax2Tries;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax2XZspread;
+        public final ForgeConfigSpec.ConfigValue<Integer> flax2Yspread;
 
 
         ArchBowsConfig(final ForgeConfigSpec.Builder BUILDER) {
@@ -117,12 +120,11 @@ public class ABConfig {
 
             BUILDER.push("requires-game-restart");
 
-            BUILDER.comment("Configure weapons conditions")
-                    .push("weapons");
+            BUILDER.comment("Configure weapons conditions");
 
             heavyCrossbowDurability = BUILDER
                     .worldRestart()
-                    .define("Arbalest_durability", 625);
+                    .define("arbalest_durability", 625);
 
             pistolCrossbowDurability = BUILDER
                     .worldRestart()
@@ -146,24 +148,32 @@ public class ABConfig {
 
 
             BUILDER.pop();
-            BUILDER.comment("World Generation");
+            BUILDER.push("World-Generation");
 
-            flaxTries = BUILDER.comment("Default=15")
+            flax1Tries = BUILDER.comment("#forge:is_plains, Default=15")
                     .worldRestart()
-                    .define("flax_tries", 15);
-            flaxXZspread =  BUILDER.comment("Default=2")
+                    .define("flax1Tries", 15);
+            flax1XZspread =  BUILDER.comment("#forge:is_plains, Default=7")
                     .worldRestart()
-                    .define("flax_xz_spread", 2);
-            flaxYspread =  BUILDER.comment("Default=3")
+                    .define("flax1XZspread", 7);
+            flax1Yspread =  BUILDER.comment("#forge:is_plains, Default=4")
                     .worldRestart()
-                    .define("flax_y_spread", 3);
+                    .define("flax1Yspread", 4);
+            flax2Tries = BUILDER.comment("#forge:is_desert and #forge:is_sandy, Default=15")
+                    .worldRestart()
+                    .define("flax2Tries", 15);
+            flax2XZspread =  BUILDER.comment("#forge:is_desert and #forge:is_sandy, Default=7")
+                    .worldRestart()
+                    .define("flax2XZspread", 7);
+            flax2Yspread =  BUILDER.comment("#forge:is_desert and #forge:is_sandy, Default=4")
+                    .worldRestart()
+                    .define("flax2Yspread", 4);
             BUILDER.pop();
 
 
         }
     }
 }
-
 
 
 
