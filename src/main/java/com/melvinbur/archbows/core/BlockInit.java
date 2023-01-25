@@ -44,7 +44,7 @@ public class BlockInit {
     private static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block> temp = BLOCKS.register(name, block);
 
-        ItemInit.ITEMS.register(name, () -> new ItemNameBlockItem(temp.get(), new Item.Properties().tab(CreativeModeTabInit.ARCHBOWS_TAB)));
+        ItemInit.ITEMS.register(name, () -> new ItemNameBlockItem(temp.get(), new Item.Properties()));
         return temp;
     }
 

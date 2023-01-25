@@ -1,3 +1,4 @@
+/*
 package com.melvinbur.archbows.world;
 
 import com.google.gson.JsonElement;
@@ -29,9 +30,9 @@ public class ABDataGenerator {
         ExistingFileHelper helper = event.getExistingFileHelper();
 
 
-        RegistryOps<JsonElement> registryOps = RegistryOps.create(JsonOps.INSTANCE, RegistryAccess.builtinCopy());
+        RegistryOps<JsonElement> registryOps = RegistryOps.create(JsonOps.INSTANCE, RegistryAccess.built());
         Map<ResourceLocation, BiomeModifier> featureGenMap = ABBiomeModifierDataGen.createFeatureGenMap(registryOps);
         JsonCodecProvider<BiomeModifier> jsonCodecProvider = JsonCodecProvider.forDatapackRegistry(gen, helper, ArchBows.MOD_ID, registryOps, ForgeRegistries.Keys.BIOME_MODIFIERS, featureGenMap);
         gen.addProvider(event.includeServer(), jsonCodecProvider);
     }
-}
+}*/

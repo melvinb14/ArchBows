@@ -5,6 +5,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +19,7 @@ import java.util.List;
 public class MultipleVegetationPatchConfiguration implements FeatureConfiguration {
 
     public static final Codec<MultipleVegetationPatchConfiguration> CODEC = RecordCodecBuilder.create((instance) -> {
-        return instance.group(TagKey.hashedCodec(Registry.BLOCK_REGISTRY)
+        return instance.group(TagKey.hashedCodec(Registries.BLOCK)
                 .fieldOf("replaceable").forGetter((config) -> {
                     return config.replaceable;
                 }), BlockStateProvider.CODEC.fieldOf("ground_state").forGetter((config) -> {

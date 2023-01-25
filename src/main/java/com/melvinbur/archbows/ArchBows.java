@@ -6,11 +6,14 @@ import com.melvinbur.archbows.common.config.Config;
 import com.melvinbur.archbows.common.util.Logger;
 import com.melvinbur.archbows.core.BlockInit;
 import com.melvinbur.archbows.core.CompostablesInit;
+import com.melvinbur.archbows.core.CreativeModeTabInit;
 import com.melvinbur.archbows.core.ItemInit;
 import com.melvinbur.archbows.world.ABBiomeModifiers;
 import com.melvinbur.archbows.world.ABConfiguredFeatures;
 import com.melvinbur.archbows.world.ABPlacements;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -44,12 +47,11 @@ public class ArchBows {
 
 
         ABBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(eventBus);
-        ABConfiguredFeatures.CONFIGURED_FEATURES.register(eventBus);
-        ABPlacements.PLACED_FEATURES.register(eventBus);
+
 
 
         // EntityInit.ENTITY_TYPES.register(eventBus);
-
+        eventBus.addListener(this::addCreative);
         eventBus.addListener(this::commonSetup);
         eventBus.addListener(this::clientSetup);
 
@@ -57,6 +59,51 @@ public class ArchBows {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
+
+    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == CreativeModeTabInit.ARCHBOWS_TAB) {
+            event.accept(BlockInit.WILD_FLAX);
+            event.accept(BlockInit.WILD_FLAX2);
+            event.accept(ItemInit.FLAX);
+            event.accept(ItemInit.FLAX_SEEDS);
+            event.accept(ItemInit.FLAX_STRING);
+            event.accept(ItemInit.LINEN_STRING);
+            event.accept(ItemInit.SHORT_BOW);
+            event.accept(ItemInit.RECURVE_BOW);
+            event.accept(ItemInit.FLAT_BOW);
+            event.accept(ItemInit.LONG_BOW);
+            event.accept(ItemInit.PISTOL_CROSSBOW);
+            event.accept(ItemInit.HEAVY_CROSSBOW);
+            event.accept(ItemInit.ARBALEST);
+
+        }
+        if (event.getTab() == CreativeModeTabs.COMBAT) {
+            event.accept(ItemInit.SHORT_BOW);
+            event.accept(ItemInit.RECURVE_BOW);
+            event.accept(ItemInit.FLAT_BOW);
+            event.accept(ItemInit.LONG_BOW);
+            event.accept(ItemInit.PISTOL_CROSSBOW);
+            event.accept(ItemInit.HEAVY_CROSSBOW);
+            event.accept(ItemInit.ARBALEST);
+
+        }
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ItemInit.FLAX_STRING);
+            event.accept(ItemInit.LINEN_STRING);
+            event.accept(ItemInit.FLAX);
+
+        }
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(BlockInit.WILD_FLAX);
+            event.accept(BlockInit.WILD_FLAX2);
+            event.accept(ItemInit.FLAX_SEEDS);
+
+        }
+
+    }
+
+
+
     private void clientSetup(final FMLClientSetupEvent event) {
     }
 

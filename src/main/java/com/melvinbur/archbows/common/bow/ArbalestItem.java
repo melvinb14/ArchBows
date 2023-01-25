@@ -1,8 +1,6 @@
 package com.melvinbur.archbows.common.bow;
 
 import com.google.common.collect.Lists;
-import com.mojang.math.Quaternion;
-import com.mojang.math.Vector3f;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.nbt.CompoundTag;
@@ -29,6 +27,8 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import org.joml.Quaternionf;
+import org.joml.Vector3f;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -294,12 +294,17 @@ public class ArbalestItem extends CrossbowItem  {
                 crossbowattackmob.shootCrossbowProjectile(crossbowattackmob.getTarget(), pCrossbowStack, projectile, pProjectileAngle);
             } else {
                 Vec3 vec31 = pShooter.getUpVector(1.0F);
-                Quaternion quaternion = new Quaternion(new Vector3f(vec31), pProjectileAngle, true);
+                Quaternionf quaternionf = (new Quaternionf()).setAngleAxis((double)(pProjectileAngle * ((float)Math.PI / 180F)), vec31.x, vec31.y, vec31.z);
                 Vec3 vec3 = pShooter.getViewVector(1.0F);
-                Vector3f vector3f = new Vector3f(vec3);
-                vector3f.transform(quaternion);
-                projectile.shootFromRotation(pShooter, pShooter.xRotO, pShooter.yRotO, 0.0F, maxVelocity * 3.0F, pInaccuracy);
+                Vector3f vector3f = vec3.toVector3f().rotate(quaternionf);
+                projectile.shoot((double)vector3f.x(), (double)vector3f.y(), (double)vector3f.z(), maxVelocity * 3.0F, pInaccuracy);
             }
+           /* Vec3 vec31 = pShooter.getUpVector(1.0F);
+            Quaternion quaternion = new Quaternion(new Vector3f(vec31), pProjectileAngle, true);
+            Vec3 vec3 = pShooter.getViewVector(1.0F);
+            Vector3f vector3f = new Vector3f(vec3);
+            vector3f.transform(quaternion);
+            projectile.shootFromRotation(pShooter, pShooter.xRotO, pShooter.yRotO, 0.0F, maxVelocity * 3.0F, pInaccuracy);*/
 
             pCrossbowStack.hurtAndBreak(flag ? 3 : 1, pShooter, (p_40858_) -> {
                 p_40858_.broadcastBreakEvent(pHand);

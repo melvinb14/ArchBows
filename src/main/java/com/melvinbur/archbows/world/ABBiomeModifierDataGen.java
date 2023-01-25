@@ -1,3 +1,4 @@
+/*
 package com.melvinbur.archbows.world;
 
 
@@ -8,6 +9,7 @@ import com.melvinbur.archbows.world.modifiers.ABBiomeModifier;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.RegistryDataLoader;
 import net.minecraft.resources.RegistryOps;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -96,7 +98,9 @@ public class ABBiomeModifierDataGen {
     }
 
     private static List<TagKey<Biome>> desert() {
-        /* rip BiomeCategory, going to take a risk and hope modded biomes with desert pyramids are also actually deserts */
+        */
+/* rip BiomeCategory, going to take a risk and hope modded biomes with desert pyramids are also actually deserts *//*
+
         return List.of(BiomeTags.HAS_DESERT_PYRAMID, BiomeTags.IS_BADLANDS);
     }
 
@@ -173,7 +177,7 @@ public class ABBiomeModifierDataGen {
 
         public Builder extraBlacklist(List<ResourceKey<Biome>> biomes) {
             for(ResourceKey<Biome> biome : biomes) {
-                this.extraBlacklist.add(registryOps.registry(Registry.BIOME_REGISTRY).get().getHolder(biome).get());
+                this.extraBlacklist.add(registryOps.registry(RegistryDataLoader.BIOME_REGISTRY).get().getHolder(biome).get());
             }
             return this;
         }
@@ -203,4 +207,4 @@ public class ABBiomeModifierDataGen {
             return new ABBiomeModifier(dimension, biomesSet, blacklistSet, decoration, placedFeature, configOption);
         }
     }
-}
+}*/

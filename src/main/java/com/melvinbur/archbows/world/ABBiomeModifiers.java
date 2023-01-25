@@ -8,6 +8,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.PrimitiveCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -22,7 +23,7 @@ public class ABBiomeModifiers {
 
     public static final RegistryObject<Codec<ABBiomeModifier>> BIOME_MODIFIER_SERIALIZER = BIOME_MODIFIER_SERIALIZERS.register("biome_modifier_serializer",
             () -> RecordCodecBuilder.create(builder -> builder.group(
-                    TagKey.codec(Registry.BIOME_REGISTRY).fieldOf("dimension").forGetter(ABBiomeModifier::dimension),
+                    TagKey.codec(Registries.BIOME).fieldOf("dimension").forGetter(ABBiomeModifier::dimension),
                     Biome.LIST_CODEC.listOf().fieldOf("biomes").forGetter(ABBiomeModifier::biomes),
                     Biome.LIST_CODEC.listOf().fieldOf("blacklist").forGetter(ABBiomeModifier::blacklist),
                     GenerationStep.Decoration.CODEC.fieldOf("decoration").forGetter(ABBiomeModifier::decoration),
