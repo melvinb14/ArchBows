@@ -1,4 +1,4 @@
-package com.melvinbur.archbows.core;
+package com.melvinbur.archbows.world;
 
 import com.melvinbur.archbows.ArchBows;
 import com.melvinbur.archbows.world.ABConfiguredFeatures;
