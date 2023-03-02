@@ -4,61 +4,37 @@
   "item.archbows.recurve": "Recurve Bow",
   "item.archbows.shortbow": "Short Bow",
   "item.archbows.flatbow": "Flat Bow",
-
   "item.archbows.arbalest": "Arbalest",
   "item.archbows.pistol_crossbow": "Pistol Crossbow",
+  "item.archbows.heavy_crossbow": "Heavy Crossbow",
 
-  "block.archbows.flax": "Flax",
-  "item.archbows.flax_seeds": "Flax Seeds",
-  "block.archbows.flax_crop": "Flax",
-
-  "item.archbows.flax_fiber": "Flax Fiber",
   "item.archbows.flax_string": "Flax String",
   "item.archbows.linen_string": "Linen String",
+  "item.archbows.flax_seeds": "Blue Flax Seeds",
 
 
-  "item.archbows.bolt": "Bolt",
-  "item.archbows.bolt_spectral": "Spectral Bolt",
-  "item.archbows.bolt_diamond": "Diamond Bolt",
+  "item.archbows.flax": "Blue Flax",
+  "item.archbows.wild_flax": "Blue Flax",
+  "item.archbows.wild_flax2": "Blue Flax",
+  "item.archbows.potted_flax": "Potted Blue Flax",
+  "item.archbows.potted_flax2": "Potted Blue Flax",
 
-  "entity.archbows.bolt": "Bolt",
-  "entity.archbows.bolt_spectral": "Spectral Bolt",
-
-
-
-
-
-
-
-  "tooltip.archbows.modifiers.longbow.draw_length": "Draw Time: %s",
-  "tooltip.archbows.modifiers.longbow.draw_length.value": "%.2fs",
-  "tooltip.archbows.modifiers.longbow.speed_multiplier": "Arrow Speed: %s",
-  "tooltip.archbows.modifiers.longbow.speed_multiplier.value": "x%.2f",
-  "tooltip.archbows.modifiers.heavy_crossbow.load_time": "Load Time: %s",
-  "tooltip.archbows.modifiers.heavy_crossbow.load_time.value": "%.2fs",
-  "tooltip.archbows.modifiers.heavy_crossbow.aim_time": "Aim Time: %s",
-  "tooltip.archbows.modifiers.heavy_crossbow.aim_time.value": "%.2fs",
-  "tooltip.archbows.modifiers.projectile.base_damage": "Base Damage: %s",
-  "tooltip.archbows.modifiers.projectile.base_damage.value": "%.2f",
-  "tooltip.archbows.modifiers.projectile.range": "Range: %s",
-  "tooltip.archbows.modifiers.projectile.range.value": "x%.2f",
-  "tooltip.archbows.modifiers.projectile.armor_piercing_factor": "Armor Piercing: %s",
-  "tooltip.archbows.modifiers.projectile.armor_piercing_factor.value": "%.2f%%",
-  "tooltip.archbows.modifiers.projectile.impact.explosion": "Explodes on impact",
-  "tooltip.archbows.modifiers.projectile.impact.glowing": "Inflicts Glowing on hit mob",
-  "tooltip.archbows.modifiers.max_stack_size": "Max Stack Size: %d",
+  "block.archbows.flax": "Blue Flax",
+  "block.archbows.wild_flax": "Blue Flax",
+  "block.archbows.wild_flax2": "Blue Flax",
+  "block.archbows.potted_flax": "Potted Blue Flax",
+  "block.archbows.potted_flax2": "Potted Blue Flax",
 
 
 
+  "tooltip.archbows.modifiers.bow.draw_length": "%s Draw Time",
+  "tooltip.archbows.modifiers.bow.draw_length.value": "%.2f",
+  "tooltip.archbows.modifiers.speed_multiplier": "%s Projectile Speed",
+  "tooltip.archbows.modifiers.speed_multiplier.value": "%.2f",
+  "tooltip.archbows.modifiers.crossbow.load_time": "%s Load Time",
+  "tooltip.archbows.modifiers.crossbow.load_time.value": "%.2f",
+  "tooltip.archbows.modifiers.crossbow.aim_time": "%s Aim Time",
+  "tooltip.archbows.modifiers.crossbow.aim_time.value": "%.2f"
 
 
-
-
-
-
-  "tooltip.archbows.enabled": "Enabled",
-  "tooltip.archbows.disabled": "Disabled",
-
-  "tooltip.%s.uncraftable_missing_material": "Cannot be crafted; Missing item in tag \"%s\"",
-  "tooltip.archbows.highlight_heavy_crossbow": "%s [%s x%d]"
 }

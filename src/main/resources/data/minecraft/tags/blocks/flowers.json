@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "archbows:flax"
+    "archbows:flax",
+    "archbows:wild_flax",
+    "archbows:wild_flax2"
   ]
 }

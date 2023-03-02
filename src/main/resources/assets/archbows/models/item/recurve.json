@@ -25,7 +25,7 @@
       "scale": [ 0.68, 0.68, 0.68 ]
     }
 
-},
+  },
   "overrides": [
     {
       "predicate": {

@@ -22,7 +22,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "archbows:flax"
+          "name": "archbows:wild_flax"
         }
       ],
       "conditions": [
