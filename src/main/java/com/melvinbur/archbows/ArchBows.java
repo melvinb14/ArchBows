@@ -2,9 +2,12 @@ package com.melvinbur.archbows;
 
 
 import com.melvinbur.archbows.common.config.ABConfig;
+
 import com.melvinbur.archbows.common.util.Logger;
 import com.melvinbur.archbows.core.BlockInit;
+import com.melvinbur.archbows.core.CompostablesInit;
 import com.melvinbur.archbows.core.ItemInit;
+
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -24,23 +27,18 @@ import net.minecraftforge.fml.loading.FMLPaths;
 @Mod(ArchBows.MOD_ID)
 public class ArchBows {
     public static final String MOD_ID = "archbows";
-
-
-
-
-
-
-
-    // Directly reference a log4j logger.
     public static final Logger LOGGER = new Logger(MOD_ID);
+
     public ArchBows() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
         //Register config
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "archbows-config.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ABConfig.CONFIG_SPEC, "archbows-server.toml");
         ABConfig.loadConfig(ABConfig.CONFIG_SPEC,
-                FMLPaths.CONFIGDIR.get().resolve("archbows-config.toml").toString());
+                FMLPaths.CONFIGDIR.get().resolve("archbows-server.toml").toString());
+
+
+
 
 
         ItemInit.register(eventBus);
@@ -51,36 +49,37 @@ public class ArchBows {
 
 
 
+        // EntityInit.ENTITY_TYPES.register(eventBus);
 
-
-
-        eventBus.addListener(this::setup);
+        eventBus.addListener(this::commonSetup);
         eventBus.addListener(this::clientSetup);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-
-
-    @SubscribeEvent
-    public static void onCommonSetup(FMLCommonSetupEvent evt) {
-        LOGGER.debug("Running common setup.");
-
-
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(CompostablesInit::init);
 
     }
 
+    @SubscribeEvent
+    public static void onCommonSetup(FMLCommonSetupEvent evt) {
+        LOGGER.debug("Debug Log.");
+        LOGGER.error("Error Log.");
 
 
-
+    }
 
 
 
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_FLAX.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.FLAX_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_FLAX2.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.WILD_FLAX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.WILD_FLAX2.get(), RenderType.cutout());
 
 
 
@@ -91,7 +90,6 @@ public class ArchBows {
 
 
     }
-
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -102,3 +100,12 @@ public class ArchBows {
 
     }
 }
+
+
+
+
+
+
+
+
+

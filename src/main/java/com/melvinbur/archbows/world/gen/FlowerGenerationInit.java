@@ -1,6 +1,6 @@
 package com.melvinbur.archbows.world.gen;
 
-import com.melvinbur.archbows.world.feature.PlacedFeaturesInit;
+import com.melvinbur.archbows.world.feature.ABPlacements;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -21,13 +21,15 @@ public class FlowerGenerationInit {
         if (types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-            base.add(PlacedFeaturesInit.FLAX_PLACED);
+            base.add(ABPlacements.FLAX_PLACED);
 
-        } else if (types.contains(BiomeDictionary.Type.HILLS)) {
+
+        } else if (types.contains(BiomeDictionary.Type.SANDY)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(PlacedFeaturesInit.FLAX_PLACED);
+
+            base.add(ABPlacements.FLAX_PLACED2);
 
             }
         }

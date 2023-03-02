@@ -3,23 +3,23 @@
   "pattern": [
     "YYY",
     "~$~",
-    " # "
+    "Y# "
   ],
   "key": {
     "~": {
-      "item": "archbows:linen_string"
+      "item": "minecraft:string"
     },
     "#": {
       "item": "minecraft:stick"
     },
     "Y": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:iron_nugget"
     },
     "$": {
       "item": "minecraft:tripwire_hook"
     }
   },
   "result": {
-    "item": "archbows:arbalest"
+    "item": "archbows:pistol_crossbow"
   }
 }

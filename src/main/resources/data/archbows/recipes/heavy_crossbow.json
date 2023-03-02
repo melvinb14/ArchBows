@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "YYY",
+    "YIY",
     "~$~",
     " # "
   ],
   "key": {
     "~": {
-      "item": "archbows:linen_string"
+      "item": "archbows:flax_string"
     },
     "#": {
       "item": "minecraft:stick"
     },
     "Y": {
+      "item": "minecraft:stick"
+    },
+    "I": {
       "item": "minecraft:iron_ingot"
     },
     "$": {
@@ -20,6 +23,6 @@
     }
   },
   "result": {
-    "item": "archbows:arbalest"
+    "item": "archbows:heavy_crossbow"
   }
 }

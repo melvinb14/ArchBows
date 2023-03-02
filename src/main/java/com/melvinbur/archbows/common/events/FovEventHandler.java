@@ -1,10 +1,12 @@
 package com.melvinbur.archbows.common.events;
 
 
-import com.melvinbur.archbows.common.bow.BaseBowItem;
-import com.melvinbur.archbows.common.bow.FlatbowItem;
-import com.melvinbur.archbows.common.bow.LongbowItem;
-import com.melvinbur.archbows.common.bow.ShortbowItem;
+
+
+
+import com.melvinbur.archbows.common.weapons.bow.*;
+
+
 import net.minecraftforge.client.event.FOVModifierEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -58,9 +60,9 @@ public class FovEventHandler {
             event.setNewfov(event.getFov() * (1.0F - fovModifier * 0.2F));
 
         }
-        if (event.getEntity().isUsingItem() && event.getEntity().getMainHandItem().getItem() instanceof BaseBowItem
+        if (event.getEntity().isUsingItem() && event.getEntity().getMainHandItem().getItem() instanceof RecurvebowItem
         ) {
-            float fovModifier = (float) event.getEntity().getTicksUsingItem() / ((BaseBowItem) event.getEntity().getMainHandItem().getItem()).getDrawSpeed();
+            float fovModifier = (float) event.getEntity().getTicksUsingItem() / ((RecurvebowItem) event.getEntity().getMainHandItem().getItem()).getDrawSpeed();
 
             if (fovModifier > 1.0F) {
                 fovModifier = 1.0F;
@@ -71,8 +73,6 @@ public class FovEventHandler {
             event.setNewfov(event.getFov() * (1.0F - fovModifier * 0.2F));
 
         }
-
-
     }
 }
 
