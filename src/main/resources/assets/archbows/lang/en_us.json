@@ -27,66 +27,14 @@
 
 
 
+  "tooltip.archbows.modifiers.bow.draw_length": "%s Draw Time",
+  "tooltip.archbows.modifiers.bow.draw_length.value": "%.2f",
+  "tooltip.archbows.modifiers.speed_multiplier": "%s Projectile Speed",
+  "tooltip.archbows.modifiers.speed_multiplier.value": "%.2f",
+  "tooltip.archbows.modifiers.crossbow.load_time": "%s Load Time",
+  "tooltip.archbows.modifiers.crossbow.load_time.value": "%.2f",
+  "tooltip.archbows.modifiers.crossbow.aim_time": "%s Aim Time",
+  "tooltip.archbows.modifiers.crossbow.aim_time.value": "%.2f"
 
 
-
-
-
-
-
-
-
-  "item.archbows.bolt": "Bolt",
-  "item.archbows.bolt_spectral": "Spectral Bolt",
-  "item.archbows.bolt_diamond": "Diamond Bolt",
-
-  "entity.archbows.bolt": "Bolt",
-  "entity.archbows.bolt_spectral": "Spectral Bolt",
-
- 
-  "item.archbows.proj_tipped": "Tipped %s",
-  "item.archbows.proj_tipped.effect.empty": "Potion-Tipped %s",
-  "item.archbows.proj_tipped.effect.water": "%s of Splashing",
-  "item.archbows.proj_tipped.effect.night_vision": "%s of Night Vision",
-  "item.archbows.proj_tipped.effect.invisibility": "%s of Invisibility",
-  "item.archbows.proj_tipped.effect.leaping": "%s of Leaping",
-  "item.archbows.proj_tipped.effect.fire_resistance": "%s of Fire Resistance",
-  "item.archbows.proj_tipped.effect.swiftness": "%s of Swiftness",
-  "item.archbows.proj_tipped.effect.slowness": "%s of Slowness",
-  "item.archbows.proj_tipped.effect.water_breathing": "%s of Water Breathing",
-  "item.archbows.proj_tipped.effect.healing": "%s of Healing",
-  "item.archbows.proj_tipped.effect.harming": "%s of Harming",
-  "item.archbows.proj_tipped.effect.poison": "%s of Poison",
-  "item.archbows.proj_tipped.effect.regeneration": "%s of Regeneration",
-  "item.archbows.proj_tipped.effect.strength": "%s of Strength",
-  "item.archbows.proj_tipped.effect.weakness": "%s of Weakness",
-  "item.archbows.proj_tipped.effect.levitation": "%s of Levitation",
-  "item.archbows.proj_tipped.effect.luck": "%s of Luck",
-  "item.archbows.proj_tipped.effect.turtle_master": "%s of the Turtle Master",
-  "item.archbows.proj_tipped.effect.slow_falling": "%s of Slow Falling",
-
-
-  "tooltip.archbows.modifiers.longbow.draw_length": "Draw Time: %s",
-  "tooltip.archbows.modifiers.longbow.draw_length.value": "%.2fs",
-  "tooltip.archbows.modifiers.longbow.speed_multiplier": "Arrow Speed: %s",
-  "tooltip.archbows.modifiers.longbow.speed_multiplier.value": "x%.2f",
-  "tooltip.archbows.modifiers.heavy_crossbow.load_time": "Load Time: %s",
-  "tooltip.archbows.modifiers.heavy_crossbow.load_time.value": "%.2fs",
-  "tooltip.archbows.modifiers.heavy_crossbow.aim_time": "Aim Time: %s",
-  "tooltip.archbows.modifiers.heavy_crossbow.aim_time.value": "%.2fs",
-  "tooltip.archbows.modifiers.projectile.base_damage": "Base Damage: %s",
-  "tooltip.archbows.modifiers.projectile.base_damage.value": "%.2f",
-  "tooltip.archbows.modifiers.projectile.range": "Range: %s",
-  "tooltip.archbows.modifiers.projectile.range.value": "x%.2f",
-  "tooltip.archbows.modifiers.projectile.armor_piercing_factor": "Armor Piercing: %s",
-  "tooltip.archbows.modifiers.projectile.armor_piercing_factor.value": "%.2f%%",
-  "tooltip.archbows.modifiers.projectile.impact.explosion": "Explodes on impact",
-  "tooltip.archbows.modifiers.projectile.impact.glowing": "Inflicts Glowing on hit mob",
-  "tooltip.archbows.modifiers.max_stack_size": "Max Stack Size: %d",
-
-  "tooltip.archbows.enabled": "Enabled",
-  "tooltip.archbows.disabled": "Disabled",
-
-  "tooltip.%s.uncraftable_missing_material": "Cannot be crafted; Missing item in tag \"%s\"",
-  "tooltip.archbows.highlight_heavy_crossbow": "%s [%s x%d]"
 }
