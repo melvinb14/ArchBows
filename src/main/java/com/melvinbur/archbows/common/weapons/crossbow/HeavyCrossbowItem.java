@@ -144,10 +144,15 @@ public class HeavyCrossbowItem extends CrossbowItem  {
 
     public static int getChargeDuration(ItemStack crossbowStack) {
         int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.QUICK_CHARGE, crossbowStack);
-        return i == 0 ? loadTime : loadTime - 5 * i;
+        return i == 0 ? loadTime : loadTime - getChargeTimeReductionPerQuickChargeLevel() * i;
     }
-
-
+    public static int getChargeTimeReductionPerQuickChargeLevel() {
+        return loadTime / 5;
+    }
+    @Override
+    public int getUseDuration(ItemStack p_40938_) {
+        return getChargeDuration(p_40938_) + 3;
+    }
 
     public boolean isValidRepairItem(ItemStack stack, ItemStack ingredient) {
         return this.material.getRepairIngredient().test(ingredient) || super.isValidRepairItem(stack, ingredient);
