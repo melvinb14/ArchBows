@@ -32,10 +32,10 @@ public class ArbalestItem extends CrossbowItem  {
         this.maxVelocity = maxVelocity;
         this.loadTime = loadTime;
         this.material = material;
-
         if (FMLEnvironment.dist.isClient()) {
             CrossbowProperties.registerArbalestProperties(this);
         }
+
 
     }
     /* Apotheosis Crescendo of bolts enchantment doesnt work because of the [use]*/
@@ -126,7 +126,7 @@ public class ArbalestItem extends CrossbowItem  {
         }
     }
 
-    public static void addChargedProjectile(ItemStack crossbowStack, ItemStack ammoStack) {
+    public  static void addChargedProjectile(ItemStack crossbowStack, ItemStack ammoStack) {
         CompoundTag compoundtag = crossbowStack.getOrCreateTag();
         ListTag listtag;
         if (compoundtag.contains("ChargedProjectiles", 9)) {
@@ -144,9 +144,15 @@ public class ArbalestItem extends CrossbowItem  {
 
     public static int getChargeDuration(ItemStack crossbowStack) {
         int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.QUICK_CHARGE, crossbowStack);
-        return i == 0 ? loadTime : loadTime - 5 * i;
+        return i == 0 ? loadTime : loadTime - getChargeTimeReductionPerQuickChargeLevel() * i;
     }
-
+    public static int getChargeTimeReductionPerQuickChargeLevel() {
+        return loadTime / 5;
+    }
+    @Override
+    public int getUseDuration(ItemStack p_40938_) {
+        return getChargeDuration(p_40938_) + 3;
+    }
 
     public int getEnchantmentValue() {
         return this.material.getEnchantmentValue();
