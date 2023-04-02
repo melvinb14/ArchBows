@@ -21,8 +21,8 @@ public class LongbowItem extends BowItem   {
     public static float  maxVelocity;
 
 
-    public LongbowItem(Item.Properties pProperties, float drawSpeed,float maxVelocity,  Tiers material) {
-        super(pProperties);
+    public LongbowItem(Properties properties, float drawSpeed,float maxVelocity,  Tiers material) {
+        super(properties);
         this.drawSpeed = drawSpeed;
         this.maxVelocity = maxVelocity;
         this.material = material;

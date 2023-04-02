@@ -26,8 +26,8 @@ public class  PistolCrossbowItem extends CrossbowItem {
     public boolean midLoadSoundPlayed = false;
 
 
-    public PistolCrossbowItem(Item.Properties pProperties,float maxVelocity, int loadTime, Tiers material) {
-        super(pProperties);
+    public PistolCrossbowItem(Properties properties,float maxVelocity, int loadTime, Tiers material) {
+        super(properties);
         this.maxVelocity = maxVelocity;
         this.loadTime = loadTime;
         this.material = material;

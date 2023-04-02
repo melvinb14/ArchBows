@@ -27,8 +27,8 @@ public class ArbalestItem extends CrossbowItem  {
     public boolean midLoadSoundPlayed = false;
 
 
-    public ArbalestItem(Item.Properties pProperties,float maxVelocity, int loadTime, Tiers material) {
-        super(pProperties);
+    public ArbalestItem(Properties properties,float maxVelocity, int loadTime, Tiers material) {
+        super(properties);
         this.maxVelocity = maxVelocity;
         this.loadTime = loadTime;
         this.material = material;
