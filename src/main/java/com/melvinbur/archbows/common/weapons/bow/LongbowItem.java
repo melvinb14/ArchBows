@@ -3,7 +3,6 @@ package com.melvinbur.archbows.common.weapons.bow;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -21,8 +20,8 @@ public class LongbowItem extends BowItem   {
     public static float  maxVelocity;
 
 
-    public LongbowItem(Item.Properties pProperties, float drawSpeed,float maxVelocity,  Tiers material) {
-        super(pProperties);
+    public LongbowItem(Properties properties, float drawSpeed,float maxVelocity,  Tiers material) {
+        super(properties);
         this.drawSpeed = drawSpeed;
         this.maxVelocity = maxVelocity;
         this.material = material;

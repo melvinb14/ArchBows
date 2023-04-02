@@ -23,8 +23,8 @@ public class FlatbowItem extends BowItem  {
     public static float  maxVelocity;
 
 
-    public FlatbowItem(Item.Properties pProperties, float drawSpeed,float maxVelocity,  Tiers material) {
-        super(pProperties);
+    public FlatbowItem(Properties properties, float drawSpeed,float maxVelocity,  Tiers material) {
+        super(properties);
         this.drawSpeed = drawSpeed;
         this.maxVelocity = maxVelocity;
         this.material = material;
