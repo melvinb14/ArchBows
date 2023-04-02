@@ -1,9 +1,6 @@
 package com.melvinbur.archbows.common.weapons.bow;
 
 
-import net.minecraft.ChatFormatting;
-
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -16,9 +13,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
 public class FlatbowItem extends BowItem  {
 
     public Tiers material;
@@ -27,8 +21,8 @@ public class FlatbowItem extends BowItem  {
     public static float  maxVelocity;
 
 
-    public FlatbowItem(Item.Properties pProperties, float drawSpeed,float maxVelocity,  Tiers material) {
-        super(pProperties);
+    public FlatbowItem(Properties properties, float drawSpeed,float maxVelocity,  Tiers material) {
+        super(properties);
         this.drawSpeed = drawSpeed;
         this.maxVelocity = maxVelocity;
         this.material = material;
