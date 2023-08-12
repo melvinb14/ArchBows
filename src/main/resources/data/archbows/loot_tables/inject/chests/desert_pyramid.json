@@ -6,6 +6,62 @@
       "entries": [
         {
           "type": "item",
+          "name": "archbows:flax_seeds",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:flax",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:wild_flax",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:wild_flax2",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
           "name": "archbows:flax_string",
           "weight": 10,
           "functions": [
@@ -13,7 +69,21 @@
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 3
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:linen_string",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
               }
             }
           ]
@@ -21,16 +91,85 @@
         {
           "type": "item",
           "name": "archbows:shortbow",
-          "weight": 8
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:pistol_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:recurve",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:heavy_crossbow",
+          "weight": 3
         },
         {
           "type": "item",
           "name": "archbows:flatbow",
-          "weight": 4
+          "weight": 3
         },
         {
-          "type": "empty",
-          "weight": 20
+          "type": "item",
+          "name": "archbows:arbalest",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:longbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 23.0,
+                "min": 10.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:shortbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 23.0,
+                "min": 10.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:pistol_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 23.0,
+                "min": 10.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:recurve",
+          "weight": 3
         }
       ]
     }

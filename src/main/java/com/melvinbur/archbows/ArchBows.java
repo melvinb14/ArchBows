@@ -11,7 +11,11 @@ import com.melvinbur.archbows.core.ItemInit;
 import com.melvinbur.archbows.world.ABBiomeModifiers;
 import com.melvinbur.archbows.world.ABConfiguredFeatures;
 import com.melvinbur.archbows.world.ABPlacements;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,6 +30,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 
 
 @Mod(ArchBows.MOD_ID)
+@Mod.EventBusSubscriber(modid = ArchBows.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ArchBows {
     public static final String MOD_ID = "archbows";
     public static final Logger LOGGER = new Logger(MOD_ID);
@@ -61,42 +66,29 @@ public class ArchBows {
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == CreativeModeTabInit.ARCHBOWS_TAB) {
-            event.accept(BlockInit.WILD_FLAX);
-            event.accept(BlockInit.WILD_FLAX2);
-            event.accept(ItemInit.FLAX);
-            event.accept(ItemInit.FLAX_SEEDS);
-            event.accept(ItemInit.FLAX_STRING);
-            event.accept(ItemInit.LINEN_STRING);
-            event.accept(ItemInit.SHORT_BOW);
-            event.accept(ItemInit.RECURVE_BOW);
-            event.accept(ItemInit.FLAT_BOW);
-            event.accept(ItemInit.LONG_BOW);
-            event.accept(ItemInit.PISTOL_CROSSBOW);
-            event.accept(ItemInit.HEAVY_CROSSBOW);
-            event.accept(ItemInit.ARBALEST);
-
-        }
         if (event.getTab() == CreativeModeTabs.COMBAT) {
-            event.accept(ItemInit.SHORT_BOW);
-            event.accept(ItemInit.RECURVE_BOW);
-            event.accept(ItemInit.FLAT_BOW);
-            event.accept(ItemInit.LONG_BOW);
-            event.accept(ItemInit.PISTOL_CROSSBOW);
-            event.accept(ItemInit.HEAVY_CROSSBOW);
-            event.accept(ItemInit.ARBALEST);
+            event.getEntries().putBefore(new ItemStack(Items.BOW), new ItemStack(ItemInit.SHORT_BOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(Items.BOW), new ItemStack(ItemInit.RECURVE_BOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ItemInit.RECURVE_BOW.get()), new ItemStack(ItemInit.FLAT_BOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ItemInit.FLAT_BOW.get()), new ItemStack(ItemInit.LONG_BOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
-        }
-        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ItemInit.FLAX_STRING);
-            event.accept(ItemInit.LINEN_STRING);
-            event.accept(ItemInit.FLAX);
+            event.getEntries().putBefore(new ItemStack(Items.CROSSBOW), new ItemStack(ItemInit.PISTOL_CROSSBOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(Items.CROSSBOW), new ItemStack(ItemInit.HEAVY_CROSSBOW.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ItemInit.HEAVY_CROSSBOW.get()), new ItemStack(ItemInit.ARBALEST.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+          }
 
-        }
         if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(BlockInit.WILD_FLAX);
-            event.accept(BlockInit.WILD_FLAX2);
-            event.accept(ItemInit.FLAX_SEEDS);
+            event.getEntries().putAfter(new ItemStack(Items.LILY_OF_THE_VALLEY), new ItemStack(BlockInit.WILD_FLAX.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(BlockInit.WILD_FLAX.get()), new ItemStack(BlockInit.WILD_FLAX2.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+            event.getEntries().putAfter(new ItemStack(Items.BEETROOT_SEEDS), new ItemStack(ItemInit.FLAX_SEEDS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.getEntries().putAfter(new ItemStack(Items.WHEAT), new ItemStack(ItemInit.FLAX.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+            event.getEntries().putAfter(new ItemStack(Items.STRING), new ItemStack(ItemInit.FLAX_STRING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ItemInit.FLAX_STRING.get()), new ItemStack(ItemInit.LINEN_STRING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }
 

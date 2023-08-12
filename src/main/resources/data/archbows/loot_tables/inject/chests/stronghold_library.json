@@ -6,12 +6,64 @@
       "entries": [
         {
           "type": "item",
-          "name": "archbows:pistol_crossbow",
-          "weight": 5
+          "name": "archbows:linen_string",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
         },
         {
           "type": "item",
-          "name": "archbows:longbow",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 15.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:shortbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 15.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:pistol_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 15.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:recurve",
           "weight": 3
         },
         {

@@ -24,7 +24,7 @@ import static com.melvinbur.archbows.common.util.ResourceLocationHelper.prefix;
 @Mod.EventBusSubscriber(modid = ArchBows.MOD_ID)
 public final class LootInit{
 
-    private static final List<String> CHEST_TABLES = ImmutableList.of("abandoned_mineshaft", "desert_pyramid", "end_city_treasure", "igloo_chest", "jungle_temple", "nether_bridge", "simple_dungeon", "stronghold_corridor", "stronghold_crossing", "stronghold_library", "village_blacksmith");
+    private static final List<String> CHEST_TABLES = ImmutableList.of("abandoned_mineshaft", "desert_pyramid", "end_city_treasure", "igloo_chest", "jungle_temple", "nether_bridge", "simple_dungeon", "stronghold_corridor", "stronghold_crossing", "stronghold_library", "village_blacksmith" , "ancient_city" , "bastion_treasure" , "spawn_bonus_chest" , "treasure");
 
 
     @SuppressWarnings("unused") //used in event
