@@ -21,8 +21,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
-
 @Mod(ArchBows.MOD_ID)
+@Mod.EventBusSubscriber(modid = ArchBows.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ArchBows {
     public static final String MOD_ID = "archbows";
     public static final Logger LOGGER = new Logger(MOD_ID);

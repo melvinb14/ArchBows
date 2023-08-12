@@ -1,0 +1,150 @@
+{
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:shortbow"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:pistol_crossbow"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:recurve"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:flatbow"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:heavy_crossbow"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:arbalest"
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "uniform",
+                "max": 0.25,
+                "min": 0.0
+              },
+              "function": "set_damage"
+            },
+            {
+              "function": "enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
+            }
+          ],
+          "name": "archbows:longbow"
+        }
+      ]
+    }
+  ]
+}

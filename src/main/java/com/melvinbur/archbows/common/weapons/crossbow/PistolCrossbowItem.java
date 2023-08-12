@@ -32,17 +32,13 @@ public class  PistolCrossbowItem extends CrossbowItem {
         this.loadTime = loadTime;
         this.material = material;
 
-        if (FMLEnvironment.dist.isClient()) {
-            CrossbowProperties.registerPistolCrossbowProperties(this);
-        }
-
     }
     /* Apotheosis Crescendo of bolts enchantment doesnt work because of the [use]*/
 
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
         if (isCharged(itemstack)) {
-            performShooting(level, player, hand, itemstack, getShootingPower(itemstack) * maxVelocity, 1.0F);
+            performShooting(level, player, hand, itemstack, getShootingPower(itemstack) , 1.0F);
             setCharged(itemstack, false);
             return InteractionResultHolder.consume(itemstack);
         } else if (!player.getProjectile(itemstack).isEmpty()) {
@@ -58,7 +54,7 @@ public class  PistolCrossbowItem extends CrossbowItem {
         }
     }
     public static float getShootingPower(ItemStack crossbowStack) {
-        return containsChargedProjectile(crossbowStack, Items.FIREWORK_ROCKET) ? 1.6F : 3.15F;
+        return containsChargedProjectile(crossbowStack, Items.FIREWORK_ROCKET) ? 1.6F : maxVelocity;
     }
 
 

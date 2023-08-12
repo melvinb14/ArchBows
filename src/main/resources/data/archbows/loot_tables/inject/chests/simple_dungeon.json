@@ -6,22 +6,80 @@
       "entries": [
         {
           "type": "item",
-          "name": "archbows:flax_fiber",
-          "weight": 9,
+          "name": "archbows:flax_seeds",
+          "weight": 8,
           "functions": [
             {
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 14
               }
             }
           ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:flax",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:wild_flax",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "archbows:wild_flax2",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+
         },
         {
           "type": "item",
           "name": "archbows:flax_string",
-          "weight": 11,
+          "weight": 7,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+
+        },
+        {
+          "type": "item",
+          "name": "archbows:linen_string",
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
@@ -31,40 +89,158 @@
               }
             }
           ]
+
         },
         {
           "type": "item",
           "name": "archbows:shortbow",
-          "weight": 11
-        },
-        {
-          "type": "item",
-          "name": "archbows:recurve",
-          "weight": 9
-        },
-        {
-          "type": "item",
-          "name": "archbows:flatbow",
-          "weight": 7
-        },
-        {
-          "type": "item",
-          "name": "archbows:longbow",
-          "weight": 5
-        },
-        {
-          "type": "item",
-          "name": "archbows:arbalest",
-          "weight": 5
+          "weight": 3
         },
         {
           "type": "item",
           "name": "archbows:pistol_crossbow",
-          "weight": 7
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:recurve",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:heavy_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:flatbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:arbalest",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "archbows:longbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:shortbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:pistol_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:recurve",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:heavy_crossbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:flatbow",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:arbalest",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": {
+                "type": "uniform",
+                "max": 40.0,
+                "min": 1.0
+              },
+              "treasure": true
+            }
+          ],
+          "name": "archbows:longbow",
+          "weight": 3
         },
         {
           "type": "empty",
-          "weight": 60
+          "weight": 68
         }
       ]
     }
