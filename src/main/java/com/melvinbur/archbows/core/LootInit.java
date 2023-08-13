@@ -24,6 +24,7 @@ import static com.melvinbur.archbows.common.util.ResourceLocationHelper.prefix;
 @Mod.EventBusSubscriber(modid = ArchBows.MOD_ID)
 public final class LootInit{
 
+    //TODO: Update LootInit
     private static final List<String> CHEST_TABLES = ImmutableList.of("abandoned_mineshaft", "desert_pyramid", "end_city_treasure", "igloo_chest", "jungle_temple", "nether_bridge", "simple_dungeon", "stronghold_corridor", "stronghold_crossing", "stronghold_library", "village_blacksmith" , "ancient_city" , "bastion_treasure" , "spawn_bonus_chest" , "treasure");
 
 
@@ -36,7 +37,7 @@ public final class LootInit{
         if ((name.startsWith(chestsPrefix) && CHEST_TABLES.contains(name.substring(chestsPrefix.length()))))
                  {
             String file = name.substring("minecraft:".length());
-            evt.getTable().addPool(getInjectPool(file));
+           // evt.getTable().addPool(getInjectPool(file));
         }
     }
 
