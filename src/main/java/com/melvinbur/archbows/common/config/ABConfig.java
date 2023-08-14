@@ -78,47 +78,47 @@ public class ABConfig {
             BUILDER.comment("Configure weapons conditions")
                     .push("weapons");
 
-            arbalestLoadTime = BUILDER.comment("Arbalest Load Time, Default=70")
-                    .define("arbalest_load-time_modifier", 70);
+            arbalestLoadTime = BUILDER.comment("Arbalest Load Time, Default=80")
+                    .define("arbalest_load-time_modifier", 80);
 
-            ArbalestProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Arbalest, Default=1.45")
-                    .defineInRange("arbalest_projectile_speed_multiplier", 1.45, 0.1D, Float.MAX_VALUE);
+            ArbalestProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Arbalest, Default=4.25")
+                    .defineInRange("arbalest_projectile_speed_multiplier", 4.25, 0.1D, Float.MAX_VALUE);
 
             pistolcrossbowLoadTime = BUILDER.comment("Pistol Crossbow Load Time, Default=10")
                     .define("pistol_crossbow_load-time_modifier", 10);
 
-            PistolCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from  Pistol Crossbow, Default=0.65")
-                    .defineInRange("pistol_crossbow_projectile_speed_multiplier", 0.65, 0.1D, Float.MAX_VALUE);
+            PistolCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from  Pistol Crossbow, Default=1.65")
+                    .defineInRange("pistol_crossbow_projectile_speed_multiplier", 1.65, 0.1D, Float.MAX_VALUE);
 
             heavycrossbowLoadTime = BUILDER.comment("Heavy Crossbow Load Time, Default=45")
                     .define("heavy_crossbow_load-time_modifier", 45);
 
-            HeavyCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from  Heavy Crossbow, Default=1.25")
-                    .defineInRange("heavy_crossbow_projectile_speed_multiplier", 1.25, 0.1D, Float.MAX_VALUE);
+            HeavyCrossbowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from  Heavy Crossbow, Default=3.75")
+                    .defineInRange("heavy_crossbow_projectile_speed_multiplier", 3.75, 0.1D, Float.MAX_VALUE);
 
             shortbowDrawspeed = BUILDER.comment("Short Bow Drawspeed, Default=15")
                     .defineInRange("short_bow_drawspeed_modifier", 15, 0.1, 100);
 
-            ShortBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Short Bow, Default=0.8")
-                    .defineInRange("short_bow_projectile_speed_multiplier", 0.8, 0.1, 100);
+            ShortBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Short Bow, Default=1.8")
+                    .defineInRange("short_bow_projectile_speed_multiplier", 1.8, 0.1, 100);
 
             recurvebowDrawspeed = BUILDER.comment("Recurve Bow Drawspeed, Default=20")
                     .defineInRange("recurve_bow_drawspeed_modifier", 20, 0.1, 100);
 
-            RecurveBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Recurve Bow, Default=1.15")
-                    .defineInRange("recurve_bow_projectile_speed_multiplier", 1.15, 0.1, 100);
+            RecurveBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Recurve Bow, Default=3.3")
+                    .defineInRange("recurve_bow_projectile_speed_multiplier", 3.3, 0.1, 100);
 
-            flatbowDrawspeed = BUILDER.comment("Flat Bow Drawspeed, Default=35")
-                    .defineInRange("flat_bow_drawspeed_modifier", 35, 0.1, 100);
+            flatbowDrawspeed = BUILDER.comment("Flat Bow Drawspeed, Default=65")
+                    .defineInRange("flat_bow_drawspeed_modifier", 65, 0.1, 100);
 
-            FlatBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Flat Bow, Default=1.35")
-                    .defineInRange("flat_bow_projectile_speed_multiplier", 1.35, 0.1, 100);
+            FlatBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Flat Bow, Default=4")
+                    .defineInRange("flat_bow_projectile_speed_multiplier", 4, 0.1, 100);
 
-            longbowDrawspeed = BUILDER.comment("Long Bow Drawspeed, Default=50")
-                    .defineInRange("long_bow_drawspeed_modifier", 50, 0.1, 100);
+            longbowDrawspeed = BUILDER.comment("Long Bow Drawspeed, Default=85")
+                    .defineInRange("long_bow_drawspeed_modifier", 85, 0.1, 100);
 
-            LongBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Long Bow, Default=1.65")
-                    .defineInRange("long_bow_projectile_speed_multiplier", 1.65, 0.1, 100);
+            LongBowProjectileVelocity = BUILDER.comment("Multiplier for the projectile speed for projectiles shot from Long Bow, Default=4.5")
+                    .defineInRange("long_bow_projectile_speed_multiplier", 4.5, 0.1, 100);
 
 
 
@@ -184,7 +184,4 @@ public class ABConfig {
         }
     }
 }
-
-
-
 
