@@ -37,7 +37,7 @@ public final class LootInit{
         if ((name.startsWith(chestsPrefix) && CHEST_TABLES.contains(name.substring(chestsPrefix.length()))))
                  {
             String file = name.substring("minecraft:".length());
-           // evt.getTable().addPool(getInjectPool(file));
+            evt.getTable().addPool(getInjectPool(file));
         }
     }
 
