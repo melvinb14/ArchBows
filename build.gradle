@@ -8,8 +8,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 repositories {
     maven {
-        name = "JEI maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
+        name = "Progwml6 maven"
+        url = "https://maven.blamejared.com/"
     }
     maven {
         name = "ModMaven"
