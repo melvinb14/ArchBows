@@ -10,7 +10,7 @@ import net.minecraftforge.common.PlantType;
 public class WildFlax2Block extends FlowerBlock {
 
     public WildFlax2Block() {
-        super(MobEffects.SATURATION, 2, Properties.copy(Blocks.DANDELION));
+        super(MobEffects.SATURATION, 2, Properties.ofFullCopy(Blocks.DANDELION));
     }
 
 

@@ -24,7 +24,7 @@ public class BlockInit {
 
     /* CROPS */
     public static final RegistryObject<Block> FLAX = BLOCKS.register("flax",
-            () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+            () -> new FlaxCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion()));
 
 
 
@@ -64,7 +64,7 @@ public class BlockInit {
 
 
     public static Block createFlowerPot(Block plant) {
-        Block block = new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ()-> plant, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+        Block block = new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ()-> plant, BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(plant)), () -> block);
         return block;
     }

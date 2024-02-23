@@ -11,7 +11,7 @@ public class OverworldFlowerBlock extends FlowerBlock {
 
 
     public OverworldFlowerBlock() {
-        super(MobEffects.SATURATION, 2, Properties.copy(Blocks.DANDELION));
+        super(MobEffects.SATURATION, 2, Properties.ofFullCopy(Blocks.DANDELION));
     }
 
 
